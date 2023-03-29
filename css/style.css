@@ -79,6 +79,10 @@ nav .second-section {
 }
 nav .second-section .nav-item {
   font-size: 0;
+  transition: color 0.8s;
+}
+nav .second-section .nav-item:hover {
+  color: #f77f00;
 }
 
 @media (min-width: 768px) {
@@ -104,6 +108,7 @@ nav .second-section .nav-item {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     min-width: 100px;
     height: 100%;
     padding: 10px 5px;
@@ -111,6 +116,22 @@ nav .second-section .nav-item {
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
+    overflow: hidden;
+  }
+  nav .second-section .nav-item::before {
+    content: "";
+    position: absolute;
+    bottom: 20px;
+    height: 3px;
+    width: 100%;
+    background-color: #f77f00;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.8s;
+  }
+  nav .second-section .nav-item:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
   }
 }
 @media (min-width: 992px) {

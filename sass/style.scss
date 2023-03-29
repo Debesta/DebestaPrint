@@ -1,4 +1,5 @@
 @import 'colors';
+@import 'animations';
 
 // RESET
 
@@ -83,6 +84,10 @@ nav {
 		height: 0;
 		.nav-item {
 			font-size: 0;
+			transition: color .8s;
+		}
+		.nav-item:hover{
+			color: $main-color;
 		}
 	}
 }
@@ -108,6 +113,7 @@ nav {
 				display: flex;
 				justify-content: center;
 				align-items: center;
+				position: relative;
 				min-width: 100px;
 				height: 100%;
 				padding: 10px 5px;
@@ -115,6 +121,22 @@ nav {
 				font-weight: bold;
 				text-align: center;
 				text-transform: uppercase;
+				overflow: hidden;
+			}
+			.nav-item::before{
+				content: '';
+				position: absolute;
+				bottom: 20px;
+				height: 3px;
+				width: 100%;
+				background-color: $main-color;
+				transform: scaleX(0);
+				transform-origin: right;
+				transition: transform .8s;
+			}
+			.nav-item:hover::before{
+				transform: scaleX(1);
+				transform-origin: left;
 			}
 		}
 	}
