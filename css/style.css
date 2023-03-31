@@ -8,7 +8,6 @@
 
 html {
   font-size: 62.5%;
-  scroll-padding-top: 80px;
 }
 
 body {
@@ -30,6 +29,10 @@ a {
   color: #003049;
 }
 
+span {
+  color: #f77f00;
+}
+
 .active {
   color: #f77f00;
 }
@@ -41,6 +44,8 @@ nav {
   position: fixed;
   width: 100%;
   height: 80px;
+  background-color: #eae2b7;
+  z-index: 10;
 }
 nav .first-section {
   display: flex;
@@ -69,9 +74,6 @@ nav .first-section .logo .title {
   text-align: center;
   text-transform: uppercase;
 }
-nav .first-section .logo span {
-  color: #f77f00;
-}
 nav .first-section .nav-bar {
   padding: 10px 30px;
   font-size: 3rem;
@@ -89,6 +91,93 @@ nav .second-section .nav-item:hover {
   color: #f77f00;
 }
 
+header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/3dprinters-small.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 80% 50%;
+}
+header .shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+header .hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  color: #eae2b7;
+}
+header .hero-text h1 {
+  font-size: 2.6rem;
+  font-weight: bold;
+}
+header .hero-text p {
+  font-size: 1.6rem;
+}
+header .about-us-btn {
+  position: absolute;
+  top: 54vh;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  border: 2px solid #eae2b7;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  color: #eae2b7;
+  transition: 0.3s;
+}
+header .about-us-btn:hover {
+  background-color: #eae2b7;
+  color: #003049;
+}
+header .arrow {
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  padding: 20px;
+  transform: translateX(-50%);
+  font-size: 4rem;
+  color: #eae2b7;
+}
+
+@media (min-width: 450px) {
+  header .hero-text h1 {
+    font-size: 3.2rem;
+  }
+  header .hero-text p {
+    font-size: 2rem;
+  }
+  header .about-us-btn {
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 576px) {
+  header .hero-text h1 {
+    font-size: 4.2rem;
+  }
+  header .hero-text p {
+    font-size: 3rem;
+  }
+  header .about-us-btn {
+    top: 56vh;
+    font-size: 2rem;
+  }
+}
 @media (min-width: 768px) {
   nav {
     flex-direction: row;
@@ -137,6 +226,22 @@ nav .second-section .nav-item:hover {
     transform: scaleX(1);
     transform-origin: left;
   }
+  header {
+    background-image: url("../img/3dprinters-large.jpg");
+  }
+  header .hero-text h1 {
+    font-size: 5rem;
+  }
+  header .hero-text p {
+    font-size: 3.8rem;
+  }
+  header .about-us-btn {
+    top: 57vh;
+    font-size: 2.6rem;
+  }
+  header .arrow {
+    font-size: 6rem;
+  }
 }
 @media (min-width: 992px) {
   nav .first-section {
@@ -147,6 +252,16 @@ nav .second-section .nav-item:hover {
   }
   nav .second-section .nav-item {
     font-size: 2rem;
+  }
+  header .hero-text h1 {
+    font-size: 6rem;
+  }
+  header .hero-text p {
+    font-size: 4.2rem;
+  }
+  header .about-us-btn {
+    top: 57vh;
+    font-size: 3rem;
   }
 }
 @media (min-width: 1200px) {
@@ -159,6 +274,9 @@ nav .second-section .nav-item:hover {
   nav .second-section .nav-item {
     font-size: 2.2rem;
   }
+  header .hero-text h1 {
+    font-size: 7rem;
+  }
 }
 @media (min-width: 1400px) {
   nav .first-section {
@@ -169,5 +287,8 @@ nav .second-section .nav-item:hover {
   }
   nav .second-section .nav-item {
     font-size: 2.4rem;
+  }
+  header .hero-text h1 {
+    font-size: 8rem;
   }
 }/*# sourceMappingURL=style.css.map */
