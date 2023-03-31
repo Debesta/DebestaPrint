@@ -30,6 +30,10 @@ a {
   color: #003049;
 }
 
+.active {
+  color: #f77f00;
+}
+
 nav {
   display: flex;
   flex-direction: column;
