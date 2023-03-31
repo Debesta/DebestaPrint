@@ -202,7 +202,6 @@ header .arrow {
     justify-content: center;
     align-items: center;
     position: relative;
-    min-width: 100px;
     height: 100%;
     padding: 10px 5px;
     font-size: 1.8rem;
