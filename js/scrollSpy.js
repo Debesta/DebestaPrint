@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
-	const sec_5 = document.querySelector('.first')
-	const sec_1 = document.querySelector('.second')
-	const sec_2 = document.querySelector('.third')
-	const sec_3 = document.querySelector('.fourth')
-	const sec_4 = document.querySelector('.fifth')
+	const sec_1 = document.querySelector('.first')
+	const sec_2 = document.querySelector('.second')
+	const sec_3 = document.querySelector('.third')
+	const sec_4 = document.querySelector('.fourth')
+	const sec_5 = document.querySelector('.fifth')
 
 	const nav = document.querySelector('nav')
 	const home = document.querySelector('.home')
