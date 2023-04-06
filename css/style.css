@@ -319,7 +319,7 @@ header .arrow {
     transform: skewX(-45deg);
     width: 520px;
     height: 50px;
-    box-shadow: 40px 25px 20px black;
+    box-shadow: 20px 20px 15px black;
     background-color: #eae2b7;
   }
   header .hero-text h1 {
