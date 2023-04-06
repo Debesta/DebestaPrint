@@ -44,6 +44,7 @@ nav {
   position: fixed;
   width: 100%;
   height: 80px;
+  box-shadow: 0px 20px 40px black;
   background-color: #eae2b7;
   z-index: 10;
 }
@@ -54,17 +55,18 @@ nav .first-section {
   width: 100%;
   height: 100%;
 }
-nav .first-section .logo {
+nav .first-section .name {
   display: flex;
   align-items: center;
   justify-content: center;
+  top: 100px;
   height: 100%;
 }
-nav .first-section .logo img {
+nav .first-section .name .logo {
   height: 50px;
   padding: 0 10px;
 }
-nav .first-section .logo .title {
+nav .first-section .name .title {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -92,13 +94,40 @@ nav .second-section .nav-item:hover {
 }
 
 header {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   position: relative;
   width: 100%;
   height: 100vh;
+}
+header .slide {
+  height: 100%;
+  z-index: 2;
+}
+header .one:hover ~ .hero-image {
+  background-image: url("../img/3dprinter-engine-small.jpg");
+}
+header .two:hover ~ .hero-image {
+  background-image: url("../img/3dprinter-small.jpg");
+}
+header .three:hover ~ .hero-image {
+  background-image: url("../img/3printer-desk-small.jpg");
+}
+header .four:hover ~ .hero-image {
+  background-image: url("../img/printing-press-small.jpg");
+}
+header .hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: url("../img/3dprinters-small.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: 80% 50%;
+  transition: background-image 0.3s;
+  z-index: 0;
 }
 header .shadow {
   position: absolute;
@@ -107,6 +136,7 @@ header .shadow {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
 }
 header .hero-text {
   position: absolute;
@@ -117,6 +147,7 @@ header .hero-text {
   padding: 20px;
   text-align: center;
   color: #eae2b7;
+  z-index: 1;
 }
 header .hero-text h1 {
   font-size: 2.6rem;
@@ -139,6 +170,7 @@ header .about-us-btn {
   text-align: center;
   color: #eae2b7;
   transition: 0.3s;
+  z-index: 3;
 }
 header .about-us-btn:hover {
   background-color: #eae2b7;
@@ -153,6 +185,7 @@ header .arrow {
   transform: translateX(-50%);
   font-size: 4rem;
   color: #eae2b7;
+  z-index: 3;
 }
 
 @media (min-width: 450px) {
@@ -194,7 +227,7 @@ header .arrow {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    width: 70%;
+    width: 60%;
     height: 100%;
   }
   nav .second-section .nav-item {
@@ -225,7 +258,19 @@ header .arrow {
     transform: scaleX(1);
     transform-origin: left;
   }
-  header {
+  header .one:hover ~ .hero-image {
+    background-image: url("../img/3dprinter-engine-large.jpg");
+  }
+  header .two:hover ~ .hero-image {
+    background-image: url("../img/3dprinter-large.jpg");
+  }
+  header .three:hover ~ .hero-image {
+    background-image: url("../img/3printer-desk-large.jpg");
+  }
+  header .four:hover ~ .hero-image {
+    background-image: url("../img/printing-press-large.jpg");
+  }
+  header .hero-image {
     background-image: url("../img/3dprinters-large.jpg");
   }
   header .hero-text h1 {
@@ -243,14 +288,40 @@ header .arrow {
   }
 }
 @media (min-width: 992px) {
+  nav {
+    justify-content: space-between;
+  }
   nav .first-section {
-    width: 25%;
+    width: 50%;
+  }
+  nav .first-section .name .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 180px;
+  }
+  nav .first-section .name .title {
+    position: absolute;
+    top: 55px;
+    left: 200px;
+    font-size: 3.2rem;
   }
   nav .second-section {
-    width: 55%;
+    width: 50%;
   }
   nav .second-section .nav-item {
     font-size: 2rem;
+  }
+  nav::before {
+    content: "";
+    position: absolute;
+    top: 80px;
+    left: -60px;
+    transform: skewX(-45deg);
+    width: 520px;
+    height: 50px;
+    box-shadow: 40px 25px 20px black;
+    background-color: #eae2b7;
   }
   header .hero-text h1 {
     font-size: 6rem;
@@ -265,13 +336,25 @@ header .arrow {
 }
 @media (min-width: 1200px) {
   nav .first-section {
-    width: 21%;
+    width: 30%;
+  }
+  nav .first-section .name .logo {
+    height: 200px;
+  }
+  nav .first-section .name .title {
+    top: 60px;
+    left: 240px;
+    font-size: 4rem;
   }
   nav .second-section {
     width: 51%;
   }
   nav .second-section .nav-item {
     font-size: 2.2rem;
+  }
+  nav::before {
+    width: 640px;
+    height: 60px;
   }
   header .hero-text h1 {
     font-size: 7rem;

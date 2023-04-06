@@ -52,6 +52,7 @@ nav {
 	position: fixed;
 	width: 100%;
 	height: 80px;
+	box-shadow: 0px 20px 40px black;
 	background-color: $bg-color;
 	z-index: 10;
 	.first-section {
@@ -60,12 +61,13 @@ nav {
 		justify-content: space-between;
 		width: 100%;
 		height: 100%;
-		.logo {
+		.name {
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			top: 100px;
 			height: 100%;
-			img {
+			.logo {
 				height: 50px;
 				padding: 0 10px;
 			}
@@ -102,13 +104,40 @@ nav {
 // HEADER
 
 header {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
 	position: relative;
 	width: 100%;
 	height: 100vh;
-	background-image: url('../img/3dprinters-small.jpg');
-	background-size: cover;
-	background-attachment: fixed;
-	background-position: 80% 50%;
+	.slide {
+		height: 100%;
+		z-index: 2;
+	}
+	.one:hover ~ .hero-image {
+		background-image: url('../img/3dprinter-engine-small.jpg');
+	}
+	.two:hover ~ .hero-image {
+		background-image: url('../img/3dprinter-small.jpg');
+	}
+	.three:hover ~ .hero-image {
+		background-image: url('../img/3printer-desk-small.jpg');
+	}
+	.four:hover ~ .hero-image {
+		background-image: url('../img/printing-press-small.jpg');
+	}
+	.hero-image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url('../img/3dprinters-small.jpg');
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: 80% 50%;
+		transition: background-image .3s;
+		z-index: 0;
+	}
 	.shadow {
 		position: absolute;
 		top: 0;
@@ -116,6 +145,7 @@ header {
 		width: 100%;
 		height: 100%;
 		background-color: $shadow-color;
+		z-index: 1;
 	}
 	.hero-text {
 		position: absolute;
@@ -126,6 +156,7 @@ header {
 		padding: 20px;
 		text-align: center;
 		color: $negative-text-color;
+		z-index: 1;
 		h1 {
 			font-size: 2.6rem;
 			font-weight: bold;
@@ -148,6 +179,7 @@ header {
 		text-align: center;
 		color: $negative-text-color;
 		transition: 0.3s;
+		z-index: 3;
 	}
 	.about-us-btn:hover {
 		background-color: $negative-text-color;
@@ -162,6 +194,7 @@ header {
 		transform: translateX(-50%);
 		font-size: 4rem;
 		color: $negative-text-color;
+		z-index: 3;
 	}
 }
 
@@ -213,7 +246,7 @@ header {
 			flex-direction: row;
 			justify-content: space-evenly;
 			align-items: center;
-			width: 70%;
+			width: 60%;
 			height: 100%;
 			.nav-item {
 				display: flex;
@@ -246,7 +279,21 @@ header {
 		}
 	}
 	header {
-		background-image: url('../img/3dprinters-large.jpg');
+		.one:hover ~ .hero-image {
+			background-image: url('../img/3dprinter-engine-large.jpg');
+		}
+		.two:hover ~ .hero-image {
+			background-image: url('../img/3dprinter-large.jpg');
+		}
+		.three:hover ~ .hero-image {
+			background-image: url('../img/3printer-desk-large.jpg');
+		}
+		.four:hover ~ .hero-image {
+			background-image: url('../img/printing-press-large.jpg');
+		}
+		.hero-image {
+			background-image: url('../img/3dprinters-large.jpg');
+		}
 		.hero-text {
 			h1 {
 				font-size: 5rem;
@@ -266,15 +313,41 @@ header {
 }
 @media (min-width: 992px) {
 	nav {
+		justify-content: space-between;
 		.first-section {
-			width: 25%;
+			width: 50%;
+			.name{
+				.logo {
+					position: absolute;
+					top: 0;
+					left: 0;
+					height: 180px;
+				}
+				.title{
+					position: absolute;
+					top: 55px;
+					left: 200px;
+					font-size: 3.2rem;
+				}
+			}
 		}
 		.second-section {
-			width: 55%;
+			width: 50%;
 			.nav-item {
 				font-size: 2rem;
 			}
 		}
+	}
+	nav::before{
+		content: '';
+		position: absolute;
+		top: 80px;
+		left: -60px;
+		transform: skewX(-45deg);
+		width: 520px;
+		height: 50px;
+		box-shadow: 40px 25px 20px black;
+		background-color: $bg-color;
 	}
 	header {
 		.hero-text {
@@ -294,7 +367,17 @@ header {
 @media (min-width: 1200px) {
 	nav {
 		.first-section {
-			width: 21%;
+			width: 30%;
+			.name{
+				.logo {
+					height: 200px;
+				}
+				.title{
+					top: 60px;
+					left: 240px;
+					font-size: 4rem;
+				}
+			}
 		}
 		.second-section {
 			width: 51%;
@@ -302,6 +385,10 @@ header {
 				font-size: 2.2rem;
 			}
 		}
+	}
+	nav::before{
+		width: 640px;
+		height: 60px;
 	}
 	header {
 		.hero-text {
