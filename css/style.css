@@ -158,7 +158,7 @@ header .hero-text p {
 }
 header .about-us-btn {
   position: absolute;
-  top: 54vh;
+  top: 55%;
   left: 50%;
   transform: translateX(-50%);
   padding: 10px;
@@ -207,7 +207,7 @@ header .arrow {
     font-size: 3rem;
   }
   header .about-us-btn {
-    top: 56vh;
+    top: 58%;
     font-size: 2rem;
   }
 }
@@ -280,7 +280,6 @@ header .arrow {
     font-size: 3.8rem;
   }
   header .about-us-btn {
-    top: 57vh;
     font-size: 2.6rem;
   }
   header .arrow {
@@ -330,7 +329,7 @@ header .arrow {
     font-size: 4.2rem;
   }
   header .about-us-btn {
-    top: 57vh;
+    top: 60%;
     font-size: 3rem;
   }
 }
