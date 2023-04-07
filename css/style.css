@@ -46,6 +46,7 @@ nav {
   height: 80px;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.7);
   background-color: #eae2b7;
+  transition: top 0.5s;
   z-index: 10;
 }
 nav .first-section {
@@ -216,7 +217,7 @@ header .arrow {
     flex-direction: row;
     justify-content: space-around;
   }
-  nav .nav-bar {
+  nav .burger-bars {
     display: none;
   }
   nav .first-section {

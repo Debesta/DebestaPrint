@@ -13,7 +13,6 @@
 
 html {
 	font-size: 62.5%;
-	// scroll-padding-top: 80px;
 }
 
 body {
@@ -54,6 +53,7 @@ nav {
 	height: 80px;
 	box-shadow: 0 10px 15px $shadow-color;
 	background-color: $bg-color;
+	transition: top 0.5s;
 	z-index: 10;
 	.first-section {
 		display: flex;
@@ -135,7 +135,7 @@ header {
 		background-size: cover;
 		background-attachment: fixed;
 		background-position: 80% 50%;
-		transition: background-image .3s;
+		transition: background-image 0.3s;
 		z-index: 0;
 	}
 	.shadow {
@@ -235,7 +235,7 @@ header {
 	nav {
 		flex-direction: row;
 		justify-content: space-around;
-		.nav-bar {
+		.burger-bars {
 			display: none;
 		}
 		.first-section {
@@ -316,14 +316,14 @@ header {
 		box-shadow: 10px 20px 15px $shadow-color;
 		.first-section {
 			width: 50%;
-			.name{
+			.name {
 				.logo {
 					position: absolute;
 					top: 0;
 					left: 0;
 					height: 180px;
 				}
-				.title{
+				.title {
 					position: absolute;
 					top: 55px;
 					left: 200px;
@@ -338,7 +338,7 @@ header {
 			}
 		}
 	}
-	nav::before{
+	nav::before {
 		content: '';
 		position: absolute;
 		top: 80px;
@@ -368,11 +368,11 @@ header {
 	nav {
 		.first-section {
 			width: 30%;
-			.name{
+			.name {
 				.logo {
 					height: 200px;
 				}
-				.title{
+				.title {
 					top: 60px;
 					left: 240px;
 					font-size: 4rem;
@@ -386,7 +386,7 @@ header {
 			}
 		}
 	}
-	nav::before{
+	nav::before {
 		width: 640px;
 		height: 60px;
 	}
