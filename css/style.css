@@ -37,7 +37,7 @@ span {
   color: #f77f00;
 }
 
-.hide {
+.hidden {
   transform: translateY(-200px);
 }
 
