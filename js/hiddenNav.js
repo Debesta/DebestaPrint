@@ -1,15 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
-	const nav = document.querySelector('nav');
-    let lastScrollY = window.scrollY;
+	const nav = document.querySelector('nav')
+	let lastScrollY = window.scrollY
 
-	function hiddenNav(){
-		if(lastScrollY < window.scrollY){
-			nav.style.top = "-200px"
-		}else{
-			nav.style.top = "0"
-		}
-		lastScrollY = window.scrollY;
+	function hiddenNav() {
+		nav.classList.toggle('hide', lastScrollY < window.scrollY)
+		lastScrollY = window.scrollY
 	}
 
-	window.addEventListener('scroll', hiddenNav);
+	window.addEventListener('scroll', hiddenNav)
 })
