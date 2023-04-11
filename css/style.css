@@ -41,6 +41,29 @@ span {
   transform: translateY(-200px);
 }
 
+.container {
+  position: relative;
+  margin: 10px auto;
+  padding: 20px 20px;
+}
+
+.title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.underline {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 3px;
+  width: 60px;
+  background-color: #f77f00;
+}
+
 nav {
   display: flex;
   flex-direction: column;
@@ -70,16 +93,6 @@ nav .first-section .name {
 nav .first-section .name .logo {
   height: 50px;
   padding: 0 10px;
-}
-nav .first-section .name .title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  font-size: 2.4rem;
-  font-weight: bold;
-  text-align: center;
-  text-transform: uppercase;
 }
 nav .first-section .burger-bars {
   padding: 10px 30px;
@@ -193,6 +206,35 @@ header .arrow {
   z-index: 3;
 }
 
+main .about-us .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 300px;
+  margin: 20px auto;
+  padding: 10px;
+}
+main .about-us .card-image {
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 300px;
+  width: 300px;
+  border: 3px solid #f77f00;
+  border-radius: 20px;
+  overflow: hidden;
+  outline: none;
+  background-size: cover;
+}
+main .about-us .card-image img {
+  height: 100%;
+}
+main .about-us .card-text {
+  padding: 10px 0;
+  font-size: 1.6rem;
+}
+
 @media (min-width: 450px) {
   header .hero-text h1 {
     font-size: 3.2rem;
@@ -290,8 +332,36 @@ header .arrow {
   header .arrow {
     font-size: 6rem;
   }
+  main .about-us .card {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 10px;
+  }
+  main .about-us .card:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  main .about-us .card:nth-child(even) .card-image {
+    border-radius: 0 20px 20px 0;
+  }
+  main .about-us .card-image {
+    border-radius: 20px 0 0 20px;
+    left: 0;
+    transform: translateX(0);
+  }
+  main .about-us .card-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    font-size: 1.6rem;
+  }
 }
 @media (min-width: 992px) {
+  .container {
+    max-width: 80vw;
+  }
   nav {
     justify-content: space-between;
     box-shadow: 10px 20px 15px rgba(0, 0, 0, 0.7);
