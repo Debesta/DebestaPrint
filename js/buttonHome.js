@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	function buttonHome() {
 		btn.classList.toggle('show', window.scrollY > heightHeader)
+        btn.classList.toggle('hide', window.scrollY <= heightHeader)
 	}
 
 	window.addEventListener('scroll', buttonHome)
