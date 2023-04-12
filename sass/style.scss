@@ -69,6 +69,24 @@ span {
 	background-color: $main-color;
 }
 
+.buttonHome{
+	position: fixed;
+	bottom: 50px;
+	right: 50px;
+	font-size: 5rem;
+	transition: color .3s;
+	z-index: 10;
+	opacity: 0;
+}
+
+.buttonHome:hover{
+	color: $main-color;
+}
+
+.show{
+	opacity: 1;
+}
+
 // NAVIGATION
 
 nav {

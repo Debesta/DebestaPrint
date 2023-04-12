@@ -64,6 +64,24 @@ span {
   background-color: #f77f00;
 }
 
+.buttonHome {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  font-size: 5rem;
+  transition: color 0.3s;
+  z-index: 10;
+  opacity: 0;
+}
+
+.buttonHome:hover {
+  color: #f77f00;
+}
+
+.show {
+  opacity: 1;
+}
+
 nav {
   display: flex;
   flex-direction: column;
