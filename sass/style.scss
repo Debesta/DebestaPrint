@@ -70,26 +70,26 @@ span {
 	background-color: $main-color;
 }
 
-.buttonHome{
+.buttonHome {
 	position: fixed;
 	bottom: 50px;
 	right: 50px;
 	font-size: 5rem;
-	transition: color .3s;
+	transition: color 0.3s;
 	z-index: 10;
 	opacity: 0;
 }
 
-.buttonHome:hover{
+.buttonHome:hover {
 	color: $main-color;
 }
 
-.hide{
-	animation: hide .5s forwards;
+.hide {
+	animation: hide 0.5s forwards;
 }
 
-.show{
-	animation: show .5s forwards;
+.show {
+	animation: show 0.5s forwards;
 }
 
 // NAVIGATION
@@ -267,8 +267,19 @@ main {
 			}
 		}
 		.card-text {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
 			padding: 10px 0;
-			font-size: 1.6rem;
+			h3 {
+				padding: 10px;
+				text-align: center;
+				font-size: 2rem;
+			}
+			p {
+				font-size: 1.6rem;
+			}
 		}
 	}
 }
@@ -405,11 +416,7 @@ main {
 				transform: translateX(0);
 			}
 			.card-text {
-				display: flex;
-				justify-content: center;
-				align-items: center;
 				width: 50%;
-				font-size: 1.6rem;
 			}
 		}
 	}

@@ -274,7 +274,18 @@ main .about-us .card-image img {
   height: 100%;
 }
 main .about-us .card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 10px 0;
+}
+main .about-us .card-text h3 {
+  padding: 10px;
+  text-align: center;
+  font-size: 2rem;
+}
+main .about-us .card-text p {
   font-size: 1.6rem;
 }
 
@@ -394,11 +405,7 @@ main .about-us .card-text {
     transform: translateX(0);
   }
   main .about-us .card-text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 50%;
-    font-size: 1.6rem;
   }
 }
 @media (min-width: 992px) {
