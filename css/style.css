@@ -484,6 +484,9 @@ main .about-us .card-text p {
   header .hero-text h1 {
     font-size: 7rem;
   }
+  main .about-us .card {
+    justify-content: space-evenly;
+  }
 }
 @media (min-width: 1400px) {
   nav .first-section {

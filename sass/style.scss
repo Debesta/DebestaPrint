@@ -511,6 +511,13 @@ main {
 			}
 		}
 	}
+	main{
+		.about-us{
+			.card{
+				justify-content: space-evenly;
+			}
+		}
+	}
 }
 @media (min-width: 1400px) {
 	nav {
