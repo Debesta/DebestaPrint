@@ -54,14 +54,6 @@ span {
   color: #f77f00;
 }
 
-.active {
-  color: #f77f00;
-}
-
-.hidden {
-  transform: translateY(-200px);
-}
-
 .container {
   position: relative;
   margin: 10px auto;
@@ -94,20 +86,17 @@ span {
   z-index: 10;
   opacity: 0;
 }
-
 .buttonHome:hover {
   color: #f77f00;
 }
-
-.hide {
+.buttonHome--hide {
   animation: hide 0.5s forwards;
 }
-
-.show {
+.buttonHome--show {
   animation: show 0.5s forwards;
 }
 
-nav {
+.nav {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -119,65 +108,74 @@ nav {
   transition: transform 0.5s;
   z-index: 10;
 }
-nav .first-section {
+.nav--hidden {
+  transform: translateY(-200px);
+}
+.nav__first {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
   height: 100%;
 }
-nav .first-section .name {
+.nav__name {
   display: flex;
   align-items: center;
   justify-content: center;
   top: 100px;
   height: 100%;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2rem;
 }
-nav .first-section .name .logo {
+.nav__logo {
   height: 50px;
   padding: 0 10px;
 }
-nav .first-section .burger-bars {
+.nav__bars {
   padding: 10px 30px;
   font-size: 3rem;
 }
-nav .second-section {
+.nav__second {
   display: flex;
   flex-direction: column;
   height: 0;
 }
-nav .second-section .nav-item {
+.nav__item {
   font-size: 0;
   transition: color 0.8s;
 }
-nav .second-section .nav-item:hover {
+.nav__item:hover {
+  color: #f77f00;
+}
+.nav__item--active {
   color: #f77f00;
 }
 
-header {
+.home {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   position: relative;
   width: 100%;
   height: 100vh;
 }
-header .slide {
+.home__slide {
   height: 100%;
   z-index: 2;
 }
-header .one:hover ~ .hero-image {
+.home .one:hover ~ .hero-image {
   background-image: url("../img/3dprinter-engine-small.jpg");
 }
-header .two:hover ~ .hero-image {
+.home .two:hover ~ .hero-image {
   background-image: url("../img/3dprinter-small.jpg");
 }
-header .three:hover ~ .hero-image {
+.home .three:hover ~ .hero-image {
   background-image: url("../img/3printer-desk-small.jpg");
 }
-header .four:hover ~ .hero-image {
+.home .four:hover ~ .hero-image {
   background-image: url("../img/printing-press-small.jpg");
 }
-header .hero-image {
+.home__image {
   position: absolute;
   top: 0;
   left: 0;
@@ -190,7 +188,7 @@ header .hero-image {
   transition: background-image 0.3s;
   z-index: 0;
 }
-header .shadow {
+.home__shadow {
   position: absolute;
   top: 0;
   left: 0;
@@ -199,7 +197,7 @@ header .shadow {
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 1;
 }
-header .hero-text {
+.home__title {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -210,14 +208,14 @@ header .hero-text {
   color: #eae2b7;
   z-index: 1;
 }
-header .hero-text h1 {
+.home__title h1 {
   font-size: 2.6rem;
   font-weight: bold;
 }
-header .hero-text p {
+.home__title p {
   font-size: 1.6rem;
 }
-header .about-us-btn {
+.home__btn {
   position: absolute;
   top: 55%;
   left: 50%;
@@ -233,11 +231,11 @@ header .about-us-btn {
   transition: 0.3s;
   z-index: 3;
 }
-header .about-us-btn:hover {
+.home__btn:hover {
   background-color: #eae2b7;
   color: #003049;
 }
-header .arrow {
+.home__arrow {
   display: block;
   position: absolute;
   bottom: 0px;
@@ -249,81 +247,82 @@ header .arrow {
   z-index: 3;
 }
 
-main .about-us .card {
+main .about-us__card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 300px;
+  max-width: 95%;
   margin: 20px auto;
   padding: 10px;
 }
-main .about-us .card-image {
+main .about-us__card__image {
   position: relative;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 300px;
-  width: 300px;
+  max-width: 300px;
   border: 3px solid #f77f00;
   border-radius: 20px;
   overflow: hidden;
-  outline: none;
-  background-size: cover;
 }
-main .about-us .card-image img {
+main .about-us__card__image img {
   height: 100%;
 }
-main .about-us .card-text {
+main .about-us__card__text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 10px 0;
 }
-main .about-us .card-text h3 {
+main .about-us__card__text h3 {
   padding: 10px;
   text-align: center;
   font-size: 2rem;
 }
-main .about-us .card-text p {
+main .about-us__card__text p {
   font-size: 1.6rem;
 }
 
 @media (min-width: 450px) {
-  header .hero-text h1 {
+  .home__title h1 {
     font-size: 3.2rem;
   }
-  header .hero-text p {
+  .home__title p {
     font-size: 2rem;
   }
-  header .about-us-btn {
+  .home__btn {
     font-size: 1.8rem;
   }
 }
 @media (min-width: 576px) {
-  header .hero-text h1 {
+  .home__title h1 {
     font-size: 4.2rem;
   }
-  header .hero-text p {
+  .home__title p {
     font-size: 3rem;
   }
-  header .about-us-btn {
+  .home__btn {
     top: 58%;
     font-size: 2rem;
   }
 }
 @media (min-width: 768px) {
-  nav {
+  .nav {
     flex-direction: row;
     justify-content: space-around;
   }
-  nav .burger-bars {
+  .nav__bars {
     display: none;
   }
-  nav .first-section {
+  .nav__first {
     width: 30%;
   }
-  nav .second-section {
+  .nav__second {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -331,7 +330,7 @@ main .about-us .card-text p {
     width: 60%;
     height: 100%;
   }
-  nav .second-section .nav-item {
+  .nav__item {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -344,7 +343,7 @@ main .about-us .card-text p {
     text-transform: uppercase;
     overflow: hidden;
   }
-  nav .second-section .nav-item::before {
+  .nav__item::before {
     content: "";
     position: absolute;
     bottom: 20px;
@@ -355,56 +354,56 @@ main .about-us .card-text p {
     transform-origin: right;
     transition: transform 0.8s;
   }
-  nav .second-section .nav-item:hover::before {
+  .nav__item:hover::before {
     transform: scaleX(1);
     transform-origin: left;
   }
-  header .one:hover ~ .hero-image {
+  .home .one:hover ~ .hero-image {
     background-image: url("../img/3dprinter-engine-large.jpg");
   }
-  header .two:hover ~ .hero-image {
+  .home .two:hover ~ .hero-image {
     background-image: url("../img/3dprinter-large.jpg");
   }
-  header .three:hover ~ .hero-image {
+  .home .three:hover ~ .hero-image {
     background-image: url("../img/3printer-desk-large.jpg");
   }
-  header .four:hover ~ .hero-image {
+  .home .four:hover ~ .hero-image {
     background-image: url("../img/printing-press-large.jpg");
   }
-  header .hero-image {
+  .home__image {
     background-image: url("../img/3dprinters-large.jpg");
   }
-  header .hero-text h1 {
+  .home__title h1 {
     font-size: 5rem;
   }
-  header .hero-text p {
+  .home__title p {
     font-size: 3.8rem;
   }
-  header .about-us-btn {
+  .home__btn {
     font-size: 2.6rem;
   }
-  header .arrow {
+  .home__arrow {
     font-size: 6rem;
   }
-  main .about-us .card {
+  main .about-us__card {
     display: flex;
     flex-direction: row;
     max-width: 100%;
     margin: 20px auto;
     padding: 10px;
   }
-  main .about-us .card:nth-child(even) {
+  main .about-us__card:nth-child(even) {
     flex-direction: row-reverse;
   }
-  main .about-us .card:nth-child(even) .card-image {
+  main .about-us__card:nth-child(even) .about-us__card__image {
     border-radius: 0 20px 20px 0;
   }
-  main .about-us .card-image {
+  main .about-us__card__image {
     border-radius: 20px 0 0 20px;
     left: 0;
     transform: translateX(0);
   }
-  main .about-us .card-text {
+  main .about-us__card__text {
     width: 50%;
   }
 }
@@ -412,32 +411,11 @@ main .about-us .card-text p {
   .container {
     max-width: 80vw;
   }
-  nav {
+  .nav {
     justify-content: space-between;
     box-shadow: 10px 20px 15px rgba(0, 0, 0, 0.7);
   }
-  nav .first-section {
-    width: 50%;
-  }
-  nav .first-section .name .logo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 180px;
-  }
-  nav .first-section .name .title {
-    position: absolute;
-    top: 55px;
-    left: 200px;
-    font-size: 3.2rem;
-  }
-  nav .second-section {
-    width: 50%;
-  }
-  nav .second-section .nav-item {
-    font-size: 2rem;
-  }
-  nav::before {
+  .nav::before {
     content: "";
     position: absolute;
     top: 80px;
@@ -448,57 +426,78 @@ main .about-us .card-text p {
     box-shadow: 20px 20px 15px rgba(0, 0, 0, 0.7);
     background-color: #eae2b7;
   }
-  header .hero-text h1 {
+  .nav__first {
+    width: 50%;
+  }
+  .nav__logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 180px;
+  }
+  .nav__title {
+    position: absolute;
+    top: 55px;
+    left: 200px;
+    font-size: 3.2rem;
+  }
+  .nav__second {
+    width: 50%;
+  }
+  .nav__item {
+    font-size: 2rem;
+  }
+  .home__title h1 {
     font-size: 6rem;
   }
-  header .hero-text p {
+  .home__title p {
     font-size: 4.2rem;
   }
-  header .about-us-btn {
+  .home__btn {
     top: 60%;
     font-size: 3rem;
   }
 }
 @media (min-width: 1200px) {
-  nav .first-section {
+  .nav::before {
+    width: 640px;
+    height: 60px;
+  }
+  .nav__first {
     width: 30%;
   }
-  nav .first-section .name .logo {
+  .nav__logo {
     height: 200px;
   }
-  nav .first-section .name .title {
+  .nav__title {
     top: 60px;
     left: 240px;
     font-size: 4rem;
   }
-  nav .second-section {
+  .nav__second {
     width: 51%;
   }
-  nav .second-section .nav-item {
+  .nav__item {
     font-size: 2.2rem;
   }
-  nav::before {
-    width: 640px;
-    height: 60px;
-  }
-  header .hero-text h1 {
+  .home__title h1 {
     font-size: 7rem;
   }
-  main .about-us .card {
+  main .about-us__card {
     justify-content: space-evenly;
   }
 }
 @media (min-width: 1400px) {
-  nav .first-section {
+  .nav__first {
     width: 18%;
   }
-  nav .second-section {
+  .nav__second {
     width: 48%;
   }
-  nav .second-section .nav-item {
+  .nav__item {
     font-size: 2.4rem;
   }
-  header .hero-text h1 {
+  .home__title h1 {
     font-size: 8rem;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -28,15 +28,15 @@ document.addEventListener('DOMContentLoaded', function () {
 		// Krótszy kod niż za pomocą funkcji warunkowej if
 		// Pierwszemu elementowi, aby był od razu podświetlony przy uruchomieniu strony, trzeba nadać klasę "active" w HTMLu
 
-		sec_1.classList.toggle('active', window.scrollY >= pos_1 && window.scrollY < pos_2)
+		sec_1.classList.toggle('nav__item--active', window.scrollY >= pos_1 && window.scrollY < pos_2)
 
-		sec_2.classList.toggle('active', window.scrollY >= pos_2 && window.scrollY < pos_3)
+		sec_2.classList.toggle('nav__item--active', window.scrollY >= pos_2 && window.scrollY < pos_3)
 
-		sec_3.classList.toggle('active', window.scrollY >= pos_3 && window.scrollY < pos_4)
+		sec_3.classList.toggle('nav__item--active', window.scrollY >= pos_3 && window.scrollY < pos_4)
 
-		sec_4.classList.toggle('active', window.scrollY >= pos_4 && window.scrollY < pos_5)
+		sec_4.classList.toggle('nav__item--active', window.scrollY >= pos_4 && window.scrollY < pos_5)
 
-		sec_5.classList.toggle('active', window.scrollY >= pos_5)
+		sec_5.classList.toggle('nav__item--active', window.scrollY >= pos_5)
 	}
 
 	window.addEventListener('scroll', scrollSpy)

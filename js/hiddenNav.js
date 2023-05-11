@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	let lastScrollY = window.scrollY
 
 	function hiddenNav() {
-		nav.classList.toggle('hidden', lastScrollY < window.scrollY)
+		nav.classList.toggle('nav--hidden', lastScrollY < window.scrollY)
 		lastScrollY = window.scrollY
 	}
 

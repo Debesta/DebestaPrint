@@ -39,14 +39,6 @@ span {
 	color: $main-color;
 }
 
-.active {
-	color: $main-color;
-}
-
-.hidden {
-	transform: translateY(-200px);
-}
-
 .container {
 	position: relative;
 	margin: 10px auto;
@@ -78,23 +70,20 @@ span {
 	transition: color 0.3s;
 	z-index: 10;
 	opacity: 0;
-}
-
-.buttonHome:hover {
-	color: $main-color;
-}
-
-.hide {
-	animation: hide 0.5s forwards;
-}
-
-.show {
-	animation: show 0.5s forwards;
+	&:hover {
+		color: $main-color;
+	}
+	&--hide {
+		animation: hide 0.5s forwards;
+	}
+	&--show {
+		animation: show 0.5s forwards;
+	}
 }
 
 // NAVIGATION
 
-nav {
+.nav {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -105,37 +94,52 @@ nav {
 	background-color: $bg-color;
 	transition: transform 0.5s;
 	z-index: 10;
-	.first-section {
+	&--hidden {
+		transform: translateY(-200px);
+	}
+
+	&__first {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 		width: 100%;
 		height: 100%;
-		.name {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			top: 100px;
-			height: 100%;
-			.logo {
-				height: 50px;
-				padding: 0 10px;
-			}
-		}
-		.burger-bars {
-			padding: 10px 30px;
-			font-size: 3rem;
-		}
 	}
-	.second-section {
+
+	&__name {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		top: 100px;
+		height: 100%;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 2rem;
+	}
+
+	&__logo {
+		height: 50px;
+		padding: 0 10px;
+	}
+
+	&__bars {
+		padding: 10px 30px;
+		font-size: 3rem;
+	}
+
+	&__second {
 		display: flex;
 		flex-direction: column;
 		height: 0;
-		.nav-item {
-			font-size: 0;
-			transition: color 0.8s;
+	}
+
+	&__item {
+		font-size: 0;
+		transition: color 0.8s;
+		&:hover {
+			color: $main-color;
 		}
-		.nav-item:hover {
+		&--active {
 			color: $main-color;
 		}
 	}
@@ -143,13 +147,13 @@ nav {
 
 // HEADER
 
-header {
+.home {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	position: relative;
 	width: 100%;
 	height: 100vh;
-	.slide {
+	&__slide {
 		height: 100%;
 		z-index: 2;
 	}
@@ -165,7 +169,7 @@ header {
 	.four:hover ~ .hero-image {
 		background-image: url('../img/printing-press-small.jpg');
 	}
-	.hero-image {
+	&__image {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -178,7 +182,7 @@ header {
 		transition: background-image 0.3s;
 		z-index: 0;
 	}
-	.shadow {
+	&__shadow {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -187,7 +191,7 @@ header {
 		background-color: $shadow-color;
 		z-index: 1;
 	}
-	.hero-text {
+	&__title {
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -205,7 +209,7 @@ header {
 			font-size: 1.6rem;
 		}
 	}
-	.about-us-btn {
+	&__btn {
 		position: absolute;
 		top: 55%;
 		left: 50%;
@@ -220,12 +224,12 @@ header {
 		color: $negative-text-color;
 		transition: 0.3s;
 		z-index: 3;
+		&:hover {
+			background-color: $negative-text-color;
+			color: $text-color;
+		}
 	}
-	.about-us-btn:hover {
-		background-color: $negative-text-color;
-		color: $text-color;
-	}
-	.arrow {
+	&__arrow {
 		display: block;
 		position: absolute;
 		bottom: 0px;
@@ -242,51 +246,52 @@ header {
 
 main {
 	.about-us {
-		.card {
+		&__card {
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
-			max-width: 300px;
+			max-width: 95%;
 			margin: 20px auto;
 			padding: 10px;
-		}
-		.card-image {
-			position: relative;
-			top: 0;
-			left: 50%;
-			transform: translateX(-50%);
-			height: 300px;
-			width: 300px;
-			border: 3px solid $main-color;
-			border-radius: 20px;
-			overflow: hidden;
-			outline: none;
-			background-size: cover;
-			img {
-				height: 100%;
+			&__image {
+				position: relative;
+				top: 0;
+				left: 50%;
+				transform: translateX(-50%);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 300px;
+				max-width: 300px;
+				border: 3px solid $main-color;
+				border-radius: 20px;
+				overflow: hidden;
+				img {
+					height: 100%;
+				}
 			}
-		}
-		.card-text {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			padding: 10px 0;
-			h3 {
-				padding: 10px;
-				text-align: center;
-				font-size: 2rem;
-			}
-			p {
-				font-size: 1.6rem;
+			&__text {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				padding: 10px 0;
+				h3 {
+					padding: 10px;
+					text-align: center;
+					font-size: 2rem;
+				}
+				p {
+					font-size: 1.6rem;
+				}
 			}
 		}
 	}
 }
 
 @media (min-width: 450px) {
-	header {
-		.hero-text {
+	.home {
+		&__title {
 			h1 {
 				font-size: 3.2rem;
 			}
@@ -294,15 +299,15 @@ main {
 				font-size: 2rem;
 			}
 		}
-		.about-us-btn {
+		&__btn {
 			font-size: 1.8rem;
 		}
 	}
 }
 
 @media (min-width: 576px) {
-	header {
-		.hero-text {
+	.home {
+		&__title {
 			h1 {
 				font-size: 4.2rem;
 			}
@@ -310,7 +315,7 @@ main {
 				font-size: 3rem;
 			}
 		}
-		.about-us-btn {
+		&__btn {
 			top: 58%;
 			font-size: 2rem;
 		}
@@ -318,36 +323,37 @@ main {
 }
 
 @media (min-width: 768px) {
-	nav {
+	.nav {
 		flex-direction: row;
 		justify-content: space-around;
-		.burger-bars {
+		&__bars {
 			display: none;
 		}
-		.first-section {
+		&__first {
 			width: 30%;
 		}
-		.second-section {
+		&__second {
 			display: flex;
 			flex-direction: row;
 			justify-content: space-evenly;
 			align-items: center;
 			width: 60%;
 			height: 100%;
-			.nav-item {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				position: relative;
-				height: 100%;
-				padding: 10px 5px;
-				font-size: 1.8rem;
-				font-weight: bold;
-				text-align: center;
-				text-transform: uppercase;
-				overflow: hidden;
-			}
-			.nav-item::before {
+		}
+
+		&__item {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			height: 100%;
+			padding: 10px 5px;
+			font-size: 1.8rem;
+			font-weight: bold;
+			text-align: center;
+			text-transform: uppercase;
+			overflow: hidden;
+			&::before {
 				content: '';
 				position: absolute;
 				bottom: 20px;
@@ -358,13 +364,13 @@ main {
 				transform-origin: right;
 				transition: transform 0.8s;
 			}
-			.nav-item:hover::before {
+			&:hover::before {
 				transform: scaleX(1);
 				transform-origin: left;
 			}
 		}
 	}
-	header {
+	.home {
 		.one:hover ~ .hero-image {
 			background-image: url('../img/3dprinter-engine-large.jpg');
 		}
@@ -377,10 +383,10 @@ main {
 		.four:hover ~ .hero-image {
 			background-image: url('../img/printing-press-large.jpg');
 		}
-		.hero-image {
+		&__image {
 			background-image: url('../img/3dprinters-large.jpg');
 		}
-		.hero-text {
+		&__title {
 			h1 {
 				font-size: 5rem;
 			}
@@ -388,35 +394,35 @@ main {
 				font-size: 3.8rem;
 			}
 		}
-		.about-us-btn {
+		&__btn {
 			font-size: 2.6rem;
 		}
-		.arrow {
+		&__arrow {
 			font-size: 6rem;
 		}
 	}
 	main {
 		.about-us {
-			.card {
+			&__card {
 				display: flex;
 				flex-direction: row;
 				max-width: 100%;
 				margin: 20px auto;
 				padding: 10px;
-			}
-			.card:nth-child(even) {
-				flex-direction: row-reverse;
-				.card-image {
-					border-radius: 0 20px 20px 0;
+				&:nth-child(even) {
+					flex-direction: row-reverse;
+					.about-us__card__image {
+						border-radius: 0 20px 20px 0;
+					}
 				}
-			}
-			.card-image {
-				border-radius: 20px 0 0 20px;
-				left: 0;
-				transform: translateX(0);
-			}
-			.card-text {
-				width: 50%;
+				&__image {
+					border-radius: 20px 0 0 20px;
+					left: 0;
+					transform: translateX(0);
+				}
+				&__text {
+					width: 50%;
+				}
 			}
 		}
 	}
@@ -425,46 +431,49 @@ main {
 	.container {
 		max-width: 80vw;
 	}
-	nav {
+	.nav {
 		justify-content: space-between;
 		box-shadow: 10px 20px 15px $shadow-color;
-		.first-section {
-			width: 50%;
-			.name {
-				.logo {
-					position: absolute;
-					top: 0;
-					left: 0;
-					height: 180px;
-				}
-				.title {
-					position: absolute;
-					top: 55px;
-					left: 200px;
-					font-size: 3.2rem;
-				}
-			}
+		&::before {
+			content: '';
+			position: absolute;
+			top: 80px;
+			left: -60px;
+			transform: skewX(-45deg);
+			width: 520px;
+			height: 50px;
+			box-shadow: 20px 20px 15px $shadow-color;
+			background-color: $bg-color;
 		}
-		.second-section {
+		&__first {
 			width: 50%;
-			.nav-item {
-				font-size: 2rem;
-			}
+		}
+
+		&__logo {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 180px;
+		}
+
+		&__title {
+			position: absolute;
+			top: 55px;
+			left: 200px;
+			font-size: 3.2rem;
+		}
+
+		&__second {
+			width: 50%;
+		}
+
+		&__item {
+			font-size: 2rem;
 		}
 	}
-	nav::before {
-		content: '';
-		position: absolute;
-		top: 80px;
-		left: -60px;
-		transform: skewX(-45deg);
-		width: 520px;
-		height: 50px;
-		box-shadow: 20px 20px 15px $shadow-color;
-		background-color: $bg-color;
-	}
-	header {
-		.hero-text {
+
+	.home {
+		&__title {
 			h1 {
 				font-size: 6rem;
 			}
@@ -472,67 +481,70 @@ main {
 				font-size: 4.2rem;
 			}
 		}
-		.about-us-btn {
+		&__btn {
 			top: 60%;
 			font-size: 3rem;
 		}
 	}
 }
 @media (min-width: 1200px) {
-	nav {
-		.first-section {
+	.nav {
+		&::before {
+			width: 640px;
+			height: 60px;
+		}
+		&__first {
 			width: 30%;
-			.name {
-				.logo {
-					height: 200px;
-				}
-				.title {
-					top: 60px;
-					left: 240px;
-					font-size: 4rem;
-				}
-			}
 		}
-		.second-section {
+
+		&__logo {
+			height: 200px;
+		}
+
+		&__title {
+			top: 60px;
+			left: 240px;
+			font-size: 4rem;
+		}
+
+		&__second {
 			width: 51%;
-			.nav-item {
-				font-size: 2.2rem;
-			}
+		}
+
+		&__item {
+			font-size: 2.2rem;
 		}
 	}
-	nav::before {
-		width: 640px;
-		height: 60px;
-	}
-	header {
-		.hero-text {
+	.home {
+		&__title {
 			h1 {
 				font-size: 7rem;
 			}
 		}
 	}
-	main{
-		.about-us{
-			.card{
+	main {
+		.about-us {
+			&__card {
 				justify-content: space-evenly;
 			}
 		}
 	}
 }
 @media (min-width: 1400px) {
-	nav {
-		.first-section {
+	.nav {
+		&__first {
 			width: 18%;
 		}
-		.second-section {
+		&__second {
 			width: 48%;
-			.nav-item {
-				font-size: 2.4rem;
-			}
+		}
+
+		&__item {
+			font-size: 2.4rem;
 		}
 	}
-	header {
-		.hero-text {
+	.home {
+		&__title {
 			h1 {
 				font-size: 8rem;
 			}
