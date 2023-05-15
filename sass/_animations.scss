@@ -19,3 +19,12 @@
         opacity: 0;
     }
 }
+
+@keyframes pop {
+    from{
+        display: none;
+    }
+    to{
+        display: block;
+    }
+}
