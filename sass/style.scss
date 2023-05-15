@@ -72,12 +72,41 @@ span {
 	opacity: 0;
 	&:hover {
 		color: $main-color;
+		.buttonHome__balloon{
+			display: block;
+		}
 	}
 	&--hide {
 		animation: hide 0.5s forwards;
 	}
 	&--show {
 		animation: show 0.5s forwards;
+	}
+	&__balloon{
+		display: none;
+		position: absolute;
+		top: -30px;
+		left: -105px;
+		width: 170px;
+		padding: 5px;
+		border-radius: .3rem;
+		text-align: center;
+		font-size: 1.2rem;
+		color: $negative-text-color;
+		background-color: $text-color;
+		transition: display .3s;
+	}
+	&__balloon::before{
+		content: '';
+		position: absolute;
+		top: 15px;
+		right: 33px;
+		width: 15px;
+		height: 15px;
+		border-radius: .3rem;
+		transform: rotate(45deg);
+		background-color: $text-color;
+		z-index: -1; 
 	}
 }
 
