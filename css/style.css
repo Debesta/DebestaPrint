@@ -171,16 +171,16 @@ span {
   height: 100%;
   z-index: 2;
 }
-.home .one:hover ~ .hero-image {
+.one:hover ~ .home__image {
   background-image: url("../img/3dprinter-engine-small.jpg");
 }
-.home .two:hover ~ .hero-image {
+.two:hover ~ .home__image {
   background-image: url("../img/3dprinter-small.jpg");
 }
-.home .three:hover ~ .hero-image {
+.three:hover ~ .home__image {
   background-image: url("../img/3printer-desk-small.jpg");
 }
-.home .four:hover ~ .hero-image {
+.four:hover ~ .home__image {
   background-image: url("../img/printing-press-small.jpg");
 }
 .home__image {
@@ -366,16 +366,16 @@ main .about-us__card__text p {
     transform: scaleX(1);
     transform-origin: left;
   }
-  .home .one:hover ~ .hero-image {
+  .one:hover ~ .home__image {
     background-image: url("../img/3dprinter-engine-large.jpg");
   }
-  .home .two:hover ~ .hero-image {
+  .two:hover ~ .home__image {
     background-image: url("../img/3dprinter-large.jpg");
   }
-  .home .three:hover ~ .hero-image {
+  .three:hover ~ .home__image {
     background-image: url("../img/3printer-desk-large.jpg");
   }
-  .home .four:hover ~ .hero-image {
+  .four:hover ~ .home__image {
     background-image: url("../img/printing-press-large.jpg");
   }
   .home__image {
