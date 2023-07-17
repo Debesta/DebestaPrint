@@ -39,13 +39,20 @@ span {
 	color: $main-color;
 }
 
+section {
+	position: relative;
+	padding: 4em 0;
+}
+
 .container {
 	position: relative;
-	margin: 10px auto;
-	padding: 20px 20px;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
 }
 
 .title {
+	padding: 20px 0;
 	font-size: 2.4rem;
 	font-weight: bold;
 	text-align: center;
@@ -79,6 +86,16 @@ span {
 	&--show {
 		animation: show 0.5s forwards;
 	}
+}
+
+.light {
+	color: $text-color;
+	background-color: $bg-color;
+}
+
+.dark {
+	color: $bg-color;
+	background-color: $text-color;
 }
 
 // NAVIGATION
@@ -155,19 +172,7 @@ span {
 	height: 100vh;
 	&__slide {
 		height: 100%;
-		z-index: 2;
-	}
-	.one:hover ~ &__image {
-		background-image: url('../img/3dprinter-engine-small.jpg');
-	}
-	.two:hover ~ &__image {
-		background-image: url('../img/3dprinter-small.jpg');
-	}
-	.three:hover ~ &__image {
-		background-image: url('../img/3printer-desk-small.jpg');
-	}
-	.four:hover ~ &__image {
-		background-image: url('../img/printing-press-small.jpg');
+		z-index: 3;
 	}
 	&__image {
 		position: absolute;
@@ -175,12 +180,16 @@ span {
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-image: url('../img/3dprinters-small.jpg');
 		background-size: cover;
 		background-attachment: fixed;
 		background-position: 80% 50%;
-		transition: background-image 0.3s;
+		transition: opacity 0.8s;
 		z-index: 0;
+
+		&--main {
+			background-image: url('../img/3dprinters-small.jpg');
+			opacity: 1;
+		}
 	}
 	&__shadow {
 		position: absolute;
@@ -189,7 +198,7 @@ span {
 		width: 100%;
 		height: 100%;
 		background-color: $shadow-color;
-		z-index: 1;
+		z-index: 2;
 	}
 	&__title {
 		position: absolute;
@@ -200,7 +209,7 @@ span {
 		padding: 20px;
 		text-align: center;
 		color: $negative-text-color;
-		z-index: 1;
+		z-index: 2;
 		h1 {
 			font-size: 2.6rem;
 			font-weight: bold;
@@ -223,7 +232,7 @@ span {
 		text-align: center;
 		color: $negative-text-color;
 		transition: 0.3s;
-		z-index: 3;
+		z-index: 4;
 		&:hover {
 			background-color: $negative-text-color;
 			color: $text-color;
@@ -238,7 +247,7 @@ span {
 		transform: translateX(-50%);
 		font-size: 4rem;
 		color: $negative-text-color;
-		z-index: 3;
+		z-index: 4;
 	}
 }
 
@@ -246,7 +255,7 @@ span {
 
 main {
 	.about-us {
-		&__card {
+		.card {
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
@@ -280,9 +289,83 @@ main {
 					padding: 10px;
 					text-align: center;
 					font-size: 2rem;
+					letter-spacing: -0.05em;
 				}
 				p {
+					padding: 0.5em 0;
 					font-size: 1.6rem;
+					line-height: 1.5em;
+				}
+			}
+		}
+	}
+
+	.portfolio {
+		width: 100%;
+
+		.box {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 3em 0;
+			overflow: hidden;
+			z-index: 0;
+
+			&::before {
+				content: '';
+				position: absolute;
+				width: 330px;
+				height: 300%;
+				right: 0;
+				box-shadow: inset -280px -40px 40px 0px $text-color;
+				z-index: 2;
+			}
+			&__link {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				max-width: 300px;
+				margin: 0 3em;
+				border: 3px solid $main-color;
+				border-radius: 10px;
+				transition: transform 0.3s;
+				overflow: hidden;
+				z-index: 1;
+
+				&:hover {
+					transform: scale(1.2);
+
+					.box__clip {
+						transform: scale(1.2);
+					}
+				}
+			}
+
+			&__clip {
+				height: 100%;
+				width: 100%;
+				transition: transform 0.3s;
+			}
+
+			&__btn {
+				position: absolute;
+				right: 50px;
+				top: 50%;
+				transform: translateY(-50%);
+				padding: 10px;
+				border: 2px solid $negative-text-color;
+				border-radius: 5px;
+				font-size: 1.6rem;
+				font-weight: bold;
+				text-transform: uppercase;
+				text-align: center;
+				color: $negative-text-color;
+				transition: 0.3s;
+				z-index: 4;
+				&:hover {
+					background-color: $negative-text-color;
+					color: $text-color;
 				}
 			}
 		}
@@ -371,20 +454,46 @@ main {
 		}
 	}
 	.home {
-		.one:hover ~ &__image {
-			background-image: url('../img/3dprinter-engine-large.jpg');
+		.one:hover ~ &__image--one {
+			opacity: 1;
 		}
-		.two:hover ~ &__image {
-			background-image: url('../img/3dprinter-large.jpg');
+		.two:hover ~ &__image--two {
+			opacity: 1;
 		}
-		.three:hover ~ &__image {
-			background-image: url('../img/3printer-desk-large.jpg');
+		.three:hover ~ &__image--three {
+			opacity: 1;
 		}
-		.four:hover ~ &__image {
-			background-image: url('../img/printing-press-large.jpg');
+		.four:hover ~ &__image--four {
+			opacity: 1;
 		}
 		&__image {
-			background-image: url('../img/3dprinters-large.jpg');
+			&--main {
+				background-image: url('../img/3dprinters-large.jpg');
+			}
+
+			&--one {
+				background-image: url('../img/3dprinter-engine-large.jpg');
+				opacity: 0;
+				z-index: 1;
+			}
+
+			&--two {
+				background-image: url('../img/3dprinter-large.jpg');
+				opacity: 0;
+				z-index: 1;
+			}
+
+			&--three {
+				background-image: url('../img/3printer-desk-large.jpg');
+				opacity: 0;
+				z-index: 1;
+			}
+
+			&--four {
+				background-image: url('../img/printing-press-large.jpg');
+				opacity: 0;
+				z-index: 1;
+			}
 		}
 		&__title {
 			h1 {
@@ -403,7 +512,7 @@ main {
 	}
 	main {
 		.about-us {
-			&__card {
+			.card {
 				display: flex;
 				flex-direction: row;
 				max-width: 100%;
@@ -411,7 +520,7 @@ main {
 				padding: 10px;
 				&:nth-child(even) {
 					flex-direction: row-reverse;
-					.about-us__card__image {
+					.card__image {
 						border-radius: 0 20px 20px 0;
 					}
 				}
@@ -524,7 +633,7 @@ main {
 	}
 	main {
 		.about-us {
-			&__card {
+			.card {
 				justify-content: space-evenly;
 			}
 		}

@@ -17,7 +17,9 @@
 </head>
 
 <body>
-    <a href="#home" class="buttonHome buttonHome--hide" alt="Strzałka w górę, nacisnięcie jej powoduje powrót do strony startowej"><i class="fa-solid fa-circle-arrow-up"></i></a>
+    <a href="#home" class="buttonHome buttonHome--hide"
+        alt="Strzałka w górę, nacisnięcie jej powoduje powrót do strony startowej"><i
+            class="fa-solid fa-circle-arrow-up"></i></a>
     <nav class="nav">
         <div class="nav__first">
             <a href="#home" class="nav__name"><img class="nav__logo" src="./img/LOGO.png"
@@ -30,7 +32,7 @@
             <a href="#home" class="nav__item first nav__item--active">home</a>
             <a href="#about-us" class="nav__item second">o nas</a>
             <a href="#portfolio" class="nav__item third">portfolio</a>
-            <a href="#prices" class="nav__item fourth">ceny</a>
+            <a href="#prices" class="nav__item fourth">cennik</a>
             <a href="#contact" class="nav__item fifth">kontakt</a>
         </div>
     </nav>
@@ -39,35 +41,83 @@
         <div class="home__slide two"></div>
         <div class="home__slide three"></div>
         <div class="home__slide four"></div>
-        <div class="home__image"></div>
+        <div class="home__image home__image--main"></div>
+        <div class="home__image home__image--one"></div>
+        <div class="home__image home__image--two"></div>
+        <div class="home__image home__image--three"></div>
+        <div class="home__image home__image--four"></div>
         <div class="home__shadow"></div>
         <div class="home__title">
             <h1>Witaj w <span>Debesta</span>Print</h1>
             <p>Druk 3D to nasza pasja</p>
         </div>
         <a href="#about-us" class="home__btn">poznaj nas</a>
-        <a href="#about-us" class="home__arrow" alt="Strzałka w dół, naciśnięcie jej powoduje przejście do sekcji o nas"><i class="fa-solid fa-angles-down"></i></a>
+        <a href="#about-us" class="home__arrow"
+            alt="Strzałka w dół, naciśnięcie jej powoduje przejście do sekcji o nas"><i
+                class="fa-solid fa-angles-down"></i></a>
     </header>
     <main>
-        <section id="about-us" class="about-us">
+        <section id="about-us" class="about-us light">
             <div class="container">
-                <h2 class="title">o nas</h2>
+                <h2 class="title light">o nas</h2>
                 <div class="underline"></div>
-                <div class="about-us__card">
-                    <div class="about-us__card__image"><img src="./img/co-workers-lego.jpg" alt="3 postacie LEGO na pierwszym planie postać o brązowych włosach i zaroście ubrana w kamizelke, krawat i koszulę, na drugim planie dwie postaci w czarnych włosach ubrane w to samo co postać pierwszoplanowa, po prawej postać z zakręconym wąsem"></div>
-                    <div class="about-us__card__text"><h3>Nasz zespół</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime necessitatibus esse autem fuga qui doloremque dicta temporibus iure perferendis minus impedit nam repudiandae totam, distinctio in ipsum. Laborum natus, nulla aut, illo tempora non numquam harum adipisci similique quo voluptate ratione molestiae sequi! Eum, amet. Non, ducimus optio, illum natus quia a quos odio recusandae doloremque sint qui rerum quas culpa possimus. Ipsa debitis ab quod dolorem voluptates cum, corrupti itaque minus officiis! Dolorum, reprehenderit. Tempora, incidunt odio dignissimos omnis maiores dicta aut harum recusandae cupiditate pariatur quas ad, aliquam amet sit accusamus deleniti temporibus, non facilis sequi optio similique?</p></div>
+                <div class="card">
+                    <div class="card__image"><img src="./img/co-workers-lego.jpg"
+                            alt="3 postacie LEGO na pierwszym planie postać o brązowych włosach i zaroście ubrana w kamizelke, krawat i koszulę, na drugim planie dwie postaci w czarnych włosach ubrane w to samo co postać pierwszoplanowa, po prawej postać z zakręconym wąsem">
+                    </div>
+                    <div class="card__text">
+                        <h3>Nasz zespół</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus autem asperiores corrupti
+                            ipsum quis nostrum, quia voluptatum eius error, quae nam laudantium. Aliquam, possimus
+                            voluptates.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur soluta dolorum, incidunt
+                            aspernatur libero odio, ipsum harum architecto velit maxime quibusdam vero saepe quasi
+                            minus.</p>
+                    </div>
                 </div>
-                <div class="about-us__card">
-                    <div class="about-us__card__image"><img src="./img/first-layer.jpg" alt="Pierwsza warstwa druku 3D wydrukowana z filamentu o kolorze niebieskim"></div>
-                    <div class="about-us__card__text"><h3>Zaawansowane ustawienia druku</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime necessitatibus esse autem fuga qui doloremque dicta temporibus iure perferendis minus impedit nam repudiandae totam, distinctio in ipsum. Laborum natus, nulla aut, illo tempora non numquam harum adipisci similique quo voluptate ratione molestiae sequi! Eum, amet. Non, ducimus optio, illum natus quia a quos odio recusandae doloremque sint qui rerum quas culpa possimus. Ipsa debitis ab quod dolorem voluptates cum, corrupti itaque minus officiis! Dolorum, reprehenderit. Tempora, incidunt odio dignissimos omnis maiores dicta aut harum recusandae cupiditate pariatur quas ad, aliquam amet sit accusamus deleniti temporibus, non facilis sequi optio similique?</p></div>
+                <div class="card">
+                    <div class="card__image"><img src="./img/first-layer.jpg"
+                            alt="Pierwsza warstwa druku 3D wydrukowana z filamentu o kolorze niebieskim"></div>
+                    <div class="card__text">
+                        <h3>Zaawansowane ustawienia druku</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus autem asperiores corrupti
+                            ipsum quis nostrum, quia voluptatum eius error, quae nam laudantium. Aliquam, possimus
+                            voluptates.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur soluta dolorum, incidunt
+                            aspernatur libero odio, ipsum harum architecto velit maxime quibusdam vero saepe quasi
+                            minus.
+                        </p>
+                    </div>
                 </div>
-                <div class="about-us__card">
-                    <div class="about-us__card__image"><img src="./img/ender-3.webp" alt="Drukarka 3D firmy Creality model Ender-3 z włączonym ekranem sterowania"></div>
-                    <div class="about-us__card__text"><h3>Nasza drukarka</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime necessitatibus esse autem fuga qui doloremque dicta temporibus iure perferendis minus impedit nam repudiandae totam, distinctio in ipsum. Laborum natus, nulla aut, illo tempora non numquam harum adipisci similique quo voluptate ratione molestiae sequi! Eum, amet. Non, ducimus optio, illum natus quia a quos odio recusandae doloremque sint qui rerum quas culpa possimus. Ipsa debitis ab quod dolorem voluptates cum, corrupti itaque minus officiis! Dolorum, reprehenderit. Tempora, incidunt odio dignissimos omnis maiores dicta aut harum recusandae cupiditate pariatur quas ad, aliquam amet sit accusamus deleniti temporibus, non facilis sequi optio similique?</p></div>
+                <div class="card">
+                    <div class="card__image"><img src="./img/ender-3.webp"
+                            alt="Drukarka 3D firmy Creality model Ender-3 z włączonym ekranem sterowania"></div>
+                    <div class="card__text">
+                        <h3>Nasza drukarka</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus autem asperiores corrupti
+                            ipsum quis nostrum, quia voluptatum eius error, quae nam laudantium. Aliquam, possimus
+                            voluptates.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur soluta dolorum, incidunt
+                            aspernatur libero odio, ipsum harum architecto velit maxime quibusdam vero saepe quasi
+                            minus.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
-        <section id="portfolio" class="portfolio"></section>
+        <section id="portfolio" class="portfolio dark">
+            <div class="container">
+                <div class="title dark">portfolio</div>
+                <div class="underline"></div>
+            </div>
+            <div class="box">
+                <a href="#" class="box__link"><video src="./img/model1.mp4" class="box__clip" type="video/mp4" loop></video></a>
+                <a href="#" class="box__link"><video src="./img/model2.mp4" class="box__clip" type="video/mp4" loop></video></a>
+                <a href="#" class="box__link"><video src="./img/model3.mp4" class="box__clip" type="video/mp4" loop></video></a>
+                <a href="#" class="box__link"><video src="./img/model4.mp4" class="box__clip" type="video/mp4" loop></video></a>
+                <a href="#" class="box__btn">Zobacz więcej</a>
+            </div>
+        </section>
         <section id="prices" class="prices"></section>
         <section id="contact" class="contact"></section>
     </main>
@@ -76,6 +126,7 @@
     <script src="./js/scrollSpy.js"></script>
     <script src="./js/hiddenNav.js"></script>
     <script src="./js/buttonHome.js"></script>
+    <script src="./js/videoHover.js"></script>
 </body>
 
 </html>

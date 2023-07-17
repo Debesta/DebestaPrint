@@ -62,13 +62,20 @@ span {
   color: #f77f00;
 }
 
+section {
+  position: relative;
+  padding: 4em 0;
+}
+
 .container {
   position: relative;
-  margin: 10px auto;
-  padding: 20px 20px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .title {
+  padding: 20px 0;
   font-size: 2.4rem;
   font-weight: bold;
   text-align: center;
@@ -102,6 +109,16 @@ span {
 }
 .buttonHome--show {
   animation: show 0.5s forwards;
+}
+
+.light {
+  color: #003049;
+  background-color: #eae2b7;
+}
+
+.dark {
+  color: #eae2b7;
+  background-color: #003049;
 }
 
 .nav {
@@ -169,19 +186,7 @@ span {
 }
 .home__slide {
   height: 100%;
-  z-index: 2;
-}
-.one:hover ~ .home__image {
-  background-image: url("../img/3dprinter-engine-small.jpg");
-}
-.two:hover ~ .home__image {
-  background-image: url("../img/3dprinter-small.jpg");
-}
-.three:hover ~ .home__image {
-  background-image: url("../img/3printer-desk-small.jpg");
-}
-.four:hover ~ .home__image {
-  background-image: url("../img/printing-press-small.jpg");
+  z-index: 3;
 }
 .home__image {
   position: absolute;
@@ -189,12 +194,15 @@ span {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../img/3dprinters-small.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: 80% 50%;
-  transition: background-image 0.3s;
+  transition: opacity 0.8s;
   z-index: 0;
+}
+.home__image--main {
+  background-image: url("../img/3dprinters-small.jpg");
+  opacity: 1;
 }
 .home__shadow {
   position: absolute;
@@ -203,7 +211,7 @@ span {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
-  z-index: 1;
+  z-index: 2;
 }
 .home__title {
   position: absolute;
@@ -214,7 +222,7 @@ span {
   padding: 20px;
   text-align: center;
   color: #eae2b7;
-  z-index: 1;
+  z-index: 2;
 }
 .home__title h1 {
   font-size: 2.6rem;
@@ -237,7 +245,7 @@ span {
   text-align: center;
   color: #eae2b7;
   transition: 0.3s;
-  z-index: 3;
+  z-index: 4;
 }
 .home__btn:hover {
   background-color: #eae2b7;
@@ -252,10 +260,10 @@ span {
   transform: translateX(-50%);
   font-size: 4rem;
   color: #eae2b7;
-  z-index: 3;
+  z-index: 4;
 }
 
-main .about-us__card {
+main .about-us .card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -263,7 +271,7 @@ main .about-us__card {
   margin: 20px auto;
   padding: 10px;
 }
-main .about-us__card__image {
+main .about-us .card__image {
   position: relative;
   top: 0;
   left: 50%;
@@ -277,23 +285,90 @@ main .about-us__card__image {
   border-radius: 20px;
   overflow: hidden;
 }
-main .about-us__card__image img {
+main .about-us .card__image img {
   height: 100%;
 }
-main .about-us__card__text {
+main .about-us .card__text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 10px 0;
 }
-main .about-us__card__text h3 {
+main .about-us .card__text h3 {
   padding: 10px;
   text-align: center;
   font-size: 2rem;
+  letter-spacing: -0.05em;
 }
-main .about-us__card__text p {
+main .about-us .card__text p {
+  padding: 0.5em 0;
   font-size: 1.6rem;
+  line-height: 1.5em;
+}
+main .portfolio {
+  width: 100%;
+}
+main .portfolio .box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3em 0;
+  overflow: hidden;
+  z-index: 0;
+}
+main .portfolio .box::before {
+  content: "";
+  position: absolute;
+  width: 330px;
+  height: 300%;
+  right: 0;
+  box-shadow: inset -280px -40px 40px 0px #003049;
+  z-index: 2;
+}
+main .portfolio .box__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 300px;
+  margin: 0 3em;
+  border: 3px solid #f77f00;
+  border-radius: 10px;
+  transition: transform 0.3s;
+  overflow: hidden;
+  z-index: 1;
+}
+main .portfolio .box__link:hover {
+  transform: scale(1.2);
+}
+main .portfolio .box__link:hover .box__clip {
+  transform: scale(1.2);
+}
+main .portfolio .box__clip {
+  height: 100%;
+  width: 100%;
+  transition: transform 0.3s;
+}
+main .portfolio .box__btn {
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  border: 2px solid #eae2b7;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  color: #eae2b7;
+  transition: 0.3s;
+  z-index: 4;
+}
+main .portfolio .box__btn:hover {
+  background-color: #eae2b7;
+  color: #003049;
 }
 
 @media (min-width: 450px) {
@@ -366,20 +441,40 @@ main .about-us__card__text p {
     transform: scaleX(1);
     transform-origin: left;
   }
-  .one:hover ~ .home__image {
-    background-image: url("../img/3dprinter-engine-large.jpg");
+  .one:hover ~ .home__image--one {
+    opacity: 1;
   }
-  .two:hover ~ .home__image {
-    background-image: url("../img/3dprinter-large.jpg");
+  .two:hover ~ .home__image--two {
+    opacity: 1;
   }
-  .three:hover ~ .home__image {
-    background-image: url("../img/3printer-desk-large.jpg");
+  .three:hover ~ .home__image--three {
+    opacity: 1;
   }
-  .four:hover ~ .home__image {
-    background-image: url("../img/printing-press-large.jpg");
+  .four:hover ~ .home__image--four {
+    opacity: 1;
   }
-  .home__image {
+  .home__image--main {
     background-image: url("../img/3dprinters-large.jpg");
+  }
+  .home__image--one {
+    background-image: url("../img/3dprinter-engine-large.jpg");
+    opacity: 0;
+    z-index: 1;
+  }
+  .home__image--two {
+    background-image: url("../img/3dprinter-large.jpg");
+    opacity: 0;
+    z-index: 1;
+  }
+  .home__image--three {
+    background-image: url("../img/3printer-desk-large.jpg");
+    opacity: 0;
+    z-index: 1;
+  }
+  .home__image--four {
+    background-image: url("../img/printing-press-large.jpg");
+    opacity: 0;
+    z-index: 1;
   }
   .home__title h1 {
     font-size: 5rem;
@@ -393,25 +488,25 @@ main .about-us__card__text p {
   .home__arrow {
     font-size: 6rem;
   }
-  main .about-us__card {
+  main .about-us .card {
     display: flex;
     flex-direction: row;
     max-width: 100%;
     margin: 20px auto;
     padding: 10px;
   }
-  main .about-us__card:nth-child(even) {
+  main .about-us .card:nth-child(even) {
     flex-direction: row-reverse;
   }
-  main .about-us__card:nth-child(even) .about-us__card__image {
+  main .about-us .card:nth-child(even) .card__image {
     border-radius: 0 20px 20px 0;
   }
-  main .about-us__card__image {
+  main .about-us .card__image {
     border-radius: 20px 0 0 20px;
     left: 0;
     transform: translateX(0);
   }
-  main .about-us__card__text {
+  main .about-us .card__text {
     width: 50%;
   }
 }
@@ -491,7 +586,7 @@ main .about-us__card__text p {
   .home__title h1 {
     font-size: 7rem;
   }
-  main .about-us__card {
+  main .about-us .card {
     justify-content: space-evenly;
   }
 }
