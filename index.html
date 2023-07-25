@@ -17,8 +17,7 @@
 </head>
 
 <body>
-    <a href="#home" class="buttonHome buttonHome--hide"><i
-            class="fa-solid fa-circle-arrow-up"></i></a>
+    <a href="#home" class="buttonHome buttonHome--hide"><i class="fa-solid fa-circle-arrow-up"></i></a>
     <nav class="nav">
         <div class="nav__first">
             <a href="#home" class="nav__name"><img class="nav__logo" src="./img/LOGO.png"
@@ -106,19 +105,73 @@
         </section>
         <section id="portfolio" class="portfolio dark">
             <div class="container">
-                <div class="title dark">portfolio</div>
-                <div class="underline"></div>
+                <h2 class="title dark">portfolio</>
+                    <div class="underline"></div>
             </div>
             <div class="box">
-                <a href="#" class="box__link"><video src="./img/model1.mp4" class="box__clip" type="video/mp4" loop></video></a>
-                <a href="#" class="box__link"><video src="./img/model2.mp4" class="box__clip" type="video/mp4" loop></video></a>
-                <a href="#" class="box__link"><video src="./img/model3.mp4" class="box__clip" type="video/mp4" loop></video></a>
-                <a href="#" class="box__link"><video src="./img/model4.mp4" class="box__clip" type="video/mp4" loop></video></a>
+                <a href="#" class="box__link"><video src="./img/3D-uchwyt-na-gitare.mp4" class="box__clip"
+                        type="video/mp4" loop></video><img src="./img/3D-uchwyt-na-gitare.png"
+                        alt="Projekt 3D ściennego uchwytu na gitarę z miejscami na przejściówki JACK i kostki do gry"
+                        class="box__img"></a>
+                <a href="#" class="box__link"><video src="./img/3D-do-statywu.mp4" class="box__clip" type="video/mp4"
+                        loop></video><img src="./img/3D-do-statywu.png"
+                        alt="Projekt 3D części obrotowej do statywu na aparat" class="box__img"></a>
+                <a href="#" class="box__link"><video src="./img/3D-uchwyt-na-winyle.mp4" class="box__clip"
+                        type="video/mp4" loop></video><img src="./img/3D-uchwyt-na-winyle.png"
+                        alt="Projekt 3D uchwytu na winyle" class="box__img"></a>
+                <a href="#" class="box__link"><video src="./img/3D-koperta-zegarka.mp4" class="box__clip"
+                        type="video/mp4" loop></video><img src="./img/3D-koperta-zegarka.png"
+                        alt="Projekt 3D koperty zegarka na rękę" class="box__img"></a>
                 <a href="#" class="box__btn">Zobacz więcej</a>
             </div>
         </section>
-        <section id="prices" class="prices"></section>
-        <section id="contact" class="contact"></section>
+        <section id="prices" class="prices light">
+            <div class="container">
+                <h2 class="title light">cennik</h2>
+                <div class="underline"></div>
+                <div class="cards-box">
+                    <div class="card" onclick="void(0)">
+                        <div class="card__first dark" onclick="void(0)">
+                            <h3 class="card__title">Druk</h3>
+                            <div class="card__icons">
+                                <i class="fa-solid fa-print"></i>
+                            </div>
+                        </div>
+                        <div class="card__second dark">
+                            <ul class="card__list">
+                                <li class="card__list-item">Własny projekt</li>
+                                <li class="card__list-item">Cena zależna od ilości zużytego filamentu oraz czasu pracy
+                                    drukarki</li>
+                                <li class="card__list-item"></li>
+                                <li class="card__list-item"></li>
+                            </ul>
+                            <a href="#" class="card__btn">Wyceń</a>
+                        </div>
+                    </div>
+                    <div class="card" onclick="void(0)">
+                        <div class="card__first dark">
+                            <h3 class="card__title">Druk <span>+</span> Projekt</h3>
+                            <div class="card__icons">
+                                <i class="fa-solid fa-print"></i>
+                                <i class="fa-solid fa-plus plus"></i>
+                                <i class="fa-regular fa-file"></i>
+                            </div>
+                        </div>
+                        <div class="card__second dark">
+                            <ul class="card__list">
+                                <li class="card__list-item">Projekt robimy za Ciebie</li>
+                                <li class="card__list-item">Cena zależna od złożoności projektu oraz ilości zużytego
+                                    filamentu i czasu pracy drukarki</li>
+                                <li class="card__list-item"></li>
+                                <li class="card__list-item"></li>
+                            </ul>
+                            <a href="#contact" class="card__btn">Napisz do nas</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contact dark"></section>
     </main>
     <footer></footer>
 

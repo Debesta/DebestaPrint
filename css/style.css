@@ -64,7 +64,6 @@ span {
 
 section {
   position: relative;
-  padding: 4em 0;
 }
 
 .container {
@@ -315,7 +314,7 @@ main .portfolio .box {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 3em 0;
+  padding: 6em 0;
   overflow: hidden;
   z-index: 0;
 }
@@ -335,21 +334,16 @@ main .portfolio .box__link {
   max-width: 400px;
   margin: 3em 3em;
   border: 3px solid #f77f00;
-  border-radius: 10px;
+  border-radius: 20px;
   transition: transform 0.3s;
   overflow: hidden;
   z-index: 1;
 }
-main .portfolio .box__link:hover {
-  transform: scale(1.2);
-}
-main .portfolio .box__link:hover .box__clip {
-  transform: scale(1.2);
+main .portfolio .box__img {
+  width: 100%;
 }
 main .portfolio .box__clip {
-  height: 100%;
-  width: 100%;
-  transition: transform 0.3s;
+  display: none;
 }
 main .portfolio .box__btn {
   position: absolute;
@@ -369,6 +363,99 @@ main .portfolio .box__btn {
   z-index: 4;
 }
 main .portfolio .box__btn:hover {
+  background-color: #eae2b7;
+  color: #003049;
+}
+main .prices {
+  padding: 1em;
+}
+main .prices .cards-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 6em 0;
+}
+main .prices .card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 3em auto;
+  perspective: 1000px;
+}
+main .prices .card:hover .card__first {
+  transform: rotateY(180deg);
+  opacity: 0;
+}
+main .prices .card:hover .card__second {
+  transform: rotateY(0);
+  opacity: 1;
+}
+main .prices .card__first {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  border: 3px solid #f77f00;
+  transition: transform 1s, opacity 1s;
+}
+main .prices .card__second {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  padding: 2em;
+  transform: rotateY(-180deg);
+  border-radius: 20px;
+  border: 3px solid #f77f00;
+  font-size: 2rem;
+  opacity: 0;
+  transition: transform 1s, opacity 1s;
+}
+main .prices .card__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 1em;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 5rem;
+}
+main .prices .card__icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 8rem;
+  color: #f77f00;
+}
+main .prices .card__icons .plus {
+  font-size: 4rem;
+  padding: 0.5em;
+}
+main .prices .card__btn {
+  position: absolute;
+  right: 50%;
+  bottom: 0;
+  transform: translate(50%, 0);
+  margin: 2em 0;
+  padding: 10px;
+  border: 2px solid #eae2b7;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  color: #eae2b7;
+  transition: 0.3s;
+  z-index: 4;
+}
+main .prices .card__btn:hover {
   background-color: #eae2b7;
   color: #003049;
 }
@@ -511,6 +598,12 @@ main .portfolio .box__btn:hover {
   main .about-us .card__text {
     width: 50%;
   }
+  main .prices .cards-box {
+    flex-direction: row;
+  }
+  main .prices .cards-box .card {
+    margin: 3em;
+  }
 }
 @media (min-width: 992px) {
   .buttonHome {
@@ -572,6 +665,7 @@ main .portfolio .box__btn:hover {
   }
   main .portfolio .box {
     flex-direction: row;
+    padding: 8em 0;
   }
   main .portfolio .box::before {
     content: "";
@@ -591,9 +685,14 @@ main .portfolio .box__btn:hover {
   main .portfolio .box__link:hover .box__clip {
     transform: scale(1.2);
   }
+  main .portfolio .box__img {
+    display: none;
+  }
   main .portfolio .box__clip {
+    display: block;
     height: 100%;
     width: 100%;
+    transition: transform 0.3s;
   }
   main .portfolio .box__btn {
     margin: auto 0;
