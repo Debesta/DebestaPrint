@@ -171,9 +171,39 @@
                 </div>
             </div>
         </section>
-        <section id="contact" class="contact dark"></section>
+        <section id="contact" class="contact dark">
+            <h2 class="title">kontakt</h2>
+            <div class="underline"></div>
+            <div class="contact__box">
+                <div class="contact__box-socials">
+                    <a href="instagram.com" class="contact__box-link facebook dark"><i
+                            class="fa-brands fa-square-facebook"></i>
+                        Facebook</a>
+                    <a href="facebook.com" class="contact__box-link instagram dark"><i
+                            class="fa-brands fa-instagram"></i>
+                        Instagram</a>
+                    <p class="contact__box-phone">tel.: +48 123 456 789</p>
+                    <p class="contact__box-adress">00-111</p>
+                    <p class="contact__box-adress">ul. Al. Jerozolimskie 200</p>
+                    <p class="contact__box-adress">Warszawa</p>
+                </div>
+                <div class="contact__box-form">
+                    <h3 class="contact__box-title">napisz do nas</h3>
+                    <form action="https://formsubmit.co/rolla.sebastian@gmail.com" method="POST"
+                        class="contact__box-form">
+                        <input type="text" name="name" placeholder="Imię" required>
+                        <input type="email" name="email" placeholder="E-mail" required>
+                        <textarea name="text" id="text" maxlength="1000" placeholder="Maximum 1000 znaków"
+                            required></textarea>
+                        <button type="submit">Wyślij</button>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer></footer>
+    <footer class="dark">
+        <p>&copy; DebestaPrint 2023</p>
+    </footer>
 
     <script src="./js/scrollSpy.js"></script>
     <script src="./js/hiddenNav.js"></script>

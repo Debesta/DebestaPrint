@@ -120,6 +120,28 @@ section {
   background-color: #003049;
 }
 
+::-moz-placeholder {
+  font-family: "Ubuntu", sans-serif;
+  color: rgba(0, 0, 0, 0.7);
+  opacity: 1;
+}
+
+::placeholder {
+  font-family: "Ubuntu", sans-serif;
+  color: rgba(0, 0, 0, 0.7);
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  font-family: "Ubuntu", sans-serif;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+::-ms-input-placeholder {
+  font-family: "Ubuntu", sans-serif;
+  color: rgba(0, 0, 0, 0.7);
+}
+
 .nav {
   display: flex;
   flex-direction: column;
@@ -366,15 +388,12 @@ main .portfolio .box__btn:hover {
   background-color: #eae2b7;
   color: #003049;
 }
-main .prices {
-  padding: 1em;
-}
 main .prices .cards-box {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 6em 0;
+  padding: 4em 0;
 }
 main .prices .card {
   position: relative;
@@ -459,6 +478,105 @@ main .prices .card__btn:hover {
   background-color: #eae2b7;
   color: #003049;
 }
+main .contact__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 1em 0;
+}
+main .contact__box-socials {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 2em;
+  font-size: 2rem;
+}
+main .contact__box-title {
+  position: relative;
+  padding: 0.5em 1em;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+main .contact__box-title::before {
+  content: "";
+  position: absolute;
+  bottom: 0.2em;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6em;
+  height: 3px;
+  background-color: #f77f00;
+}
+main .contact__box-container {
+  max-width: 600px;
+}
+main .contact__box-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 2em;
+}
+main .contact__box-form input {
+  max-width: 300px;
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+  font-family: "Ubuntu", sans-serif;
+  border: 3px solid #f77f00;
+  border-radius: 20px;
+}
+main .contact__box-form textarea {
+  max-width: 100%;
+  min-height: 200px;
+  padding: 0.5em;
+  font-family: "Ubuntu", sans-serif;
+  border: 3px solid #f77f00;
+  border-radius: 20px;
+  resize: vertical;
+}
+main .contact__box-form button {
+  margin: 2em 0;
+  padding: 10px;
+  border: 2px solid #eae2b7;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  color: #eae2b7;
+  transition: 0.3s;
+  z-index: 4;
+}
+main .contact__box-form button:hover {
+  background-color: #eae2b7;
+  color: #003049;
+}
+main .contact__box-link {
+  padding: 0.5em 0;
+}
+main .contact__box-link i {
+  transition: color 0.3s;
+}
+main .contact__box-phone {
+  margin-bottom: 0.5em;
+}
+main .contact__box .instagram:hover i {
+  color: #E1306C;
+}
+main .contact__box .facebook:hover i {
+  color: #4267B2;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  font-size: 2rem;
+}
 
 @media (min-width: 450px) {
   .home__title h1 {
@@ -481,6 +599,10 @@ main .prices .card__btn:hover {
   .home__btn {
     top: 58%;
     font-size: 2rem;
+  }
+  main .contact__box-form button {
+    width: 50%;
+    margin: 1em auto;
   }
 }
 @media (min-width: 768px) {
@@ -602,6 +724,8 @@ main .prices .card__btn:hover {
     flex-direction: row;
   }
   main .prices .cards-box .card {
+    width: 350px;
+    height: 450px;
     margin: 3em;
   }
 }
@@ -699,6 +823,18 @@ main .prices .card__btn:hover {
     right: 30px;
     bottom: 50%;
     transform: translate(0, 50%);
+  }
+  main .contact__box {
+    flex-direction: row;
+  }
+  main .contact__box-socials {
+    width: 30%;
+  }
+  main .contact__box-form {
+    width: 100%;
+  }
+  main .contact__box-form button {
+    width: 30%;
   }
 }
 @media (min-width: 1200px) {

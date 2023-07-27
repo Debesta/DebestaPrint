@@ -97,6 +97,22 @@ section {
 	background-color: $text-color;
 }
 
+::placeholder {
+	font-family: 'Ubuntu', sans-serif;
+	color: $shadow-color;
+	opacity: 1;
+}
+
+:-ms-input-placeholder {
+	font-family: 'Ubuntu', sans-serif;
+	color: $shadow-color;
+}
+
+::-ms-input-placeholder {
+	font-family: 'Ubuntu', sans-serif;
+	color: $shadow-color;
+}
+
 // NAVIGATION
 
 .nav {
@@ -367,14 +383,12 @@ main {
 	}
 
 	.prices {
-		padding: 1em;
-
-		.cards-box{
+		.cards-box {
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			flex-direction: column;
-			padding: 6em 0;
+			padding: 4em 0;
 		}
 		.card {
 			position: relative;
@@ -447,7 +461,7 @@ main {
 				}
 			}
 
-			&__btn{
+			&__btn {
 				position: absolute;
 				right: 50%;
 				bottom: 0;
@@ -470,6 +484,123 @@ main {
 			}
 		}
 	}
+
+	.contact {
+		&__box {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			width: 100%;
+			padding: 1em 0;
+
+			&-socials {
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+				padding: 2em;
+				font-size: 2rem;
+			}
+
+			&-title {
+				position: relative;
+				padding: 0.5em 1em;
+				font-size: 2rem;
+				text-transform: uppercase;
+				text-align: center;
+
+				&::before {
+					content: '';
+					position: absolute;
+					bottom: 0.2em;
+					left: 50%;
+					transform: translateX(-50%);
+					width: 6em;
+					height: 3px;
+					background-color: $main-color;
+				}
+			}
+
+			&-container {
+				max-width: 600px;
+			}
+
+			&-form {
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+				padding: 2em;
+
+				input {
+					max-width: 300px;
+					margin-bottom: 0.5em;
+					padding: 0.5em;
+					font-family: 'Ubuntu', sans-serif;
+					border: 3px solid $main-color;
+					border-radius: 20px;
+				}
+				textarea {
+					max-width: 100%;
+					min-height: 200px;
+					padding: 0.5em;
+					font-family: 'Ubuntu', sans-serif;
+					border: 3px solid $main-color;
+					border-radius: 20px;
+					resize: vertical;
+				}
+
+				button {
+					margin: 2em 0;
+					padding: 10px;
+					border: 2px solid $negative-text-color;
+					border-radius: 5px;
+					font-size: 1.6rem;
+					font-weight: bold;
+					text-transform: uppercase;
+					text-align: center;
+					color: $negative-text-color;
+					transition: 0.3s;
+					z-index: 4;
+					&:hover {
+						background-color: $negative-text-color;
+						color: $text-color;
+					}
+				}
+			}
+
+			&-link {
+				padding: 0.5em 0;
+				i {
+					transition: color 0.3s;
+				}
+			}
+
+			&-phone {
+				margin-bottom: 0.5em;
+			}
+
+			.instagram:hover {
+				i {
+					color: $instagram;
+				}
+			}
+
+			.facebook:hover {
+				i {
+					color: $facebook;
+				}
+			}
+		}
+	}
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 50px;
+	font-size: 2rem;
 }
 
 @media (min-width: 450px) {
@@ -501,6 +632,19 @@ main {
 		&__btn {
 			top: 58%;
 			font-size: 2rem;
+		}
+	}
+
+	main {
+		.contact {
+			&__box {
+				&-form {
+					button {
+						width: 50%;
+						margin: 1em auto;
+					}
+				}
+			}
 		}
 	}
 }
@@ -635,10 +779,12 @@ main {
 			}
 		}
 
-		.prices{
-			.cards-box{
+		.prices {
+			.cards-box {
 				flex-direction: row;
-				.card{
+				.card {
+					width: 350px;
+					height: 450px;
 					margin: 3em;
 				}
 			}
@@ -756,6 +902,24 @@ main {
 					right: 30px;
 					bottom: 50%;
 					transform: translate(0, 50%);
+				}
+			}
+		}
+
+		.contact {
+			&__box {
+				flex-direction: row;
+
+				&-socials {
+					width: 30%;
+				}
+
+				&-form {
+					width: 100%;
+
+					button{
+						width: 30%;
+					}
 				}
 			}
 		}
