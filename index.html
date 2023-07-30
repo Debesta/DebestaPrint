@@ -18,21 +18,27 @@
 </head>
 
 <body>
-    <a href="#home" class="buttonHome buttonHome--hide"><i class="fa-solid fa-circle-arrow-up"></i></a>
+    <a href="#home" class="buttonHome buttonHome--hide" aria-label="Przycisk przenoszący do sekcji home"><i
+            class="fa-solid fa-circle-arrow-up"></i></a>
     <nav class="nav">
         <div class="nav__first">
-            <a href="#home" class="nav__name"><img class="nav__logo" src="./img/LOGO.png"
+            <a href="#home" class="nav__name"
+                aria-label="Logo firmy DebestaPrint, mała litera d w kolorze pomarańczowym i mała litera b w kolorze granatowym"><img
+                    class="nav__logo" src="./img/LOGO.png"
                     alt="Logo firmy DebestaPrint, mała litera d w kolorze pomarańczowym i mała litera b w kolorze granatowym">
                 <p class="nav__title"><span>debesta</span>print</p>
             </a>
-            <button class="nav__bars"><i class="fa-solid fa-bars"></i></button>
+            <button class="nav__bars" aria-label="Przycisk rozwijający nawigację"><i
+                    class="fa-solid fa-bars"></i></button>
         </div>
         <div class="nav__second">
-            <a href="#home" class="nav__item first nav__item--active">home</a>
-            <a href="#about-us" class="nav__item second">o nas</a>
-            <a href="#portfolio" class="nav__item third">portfolio</a>
-            <a href="#prices" class="nav__item fourth">cennik</a>
-            <a href="#contact" class="nav__item fifth">kontakt</a>
+            <a href="#home" class="nav__item first nav__item--active"
+                aria-label="Przycisk przenoszący do sekcji home">home</a>
+            <a href="#about-us" class="nav__item second" aria-label="Przycisk przenoszący do sekcji o nas">o nas</a>
+            <a href="#portfolio" class="nav__item third"
+                aria-label="Przycisk przenoszący do sekcji portfolio">portfolio</a>
+            <a href="#prices" class="nav__item fourth" aria-label="Przycisk przenoszący do sekcji cennik">cennik</a>
+            <a href="#contact" class="nav__item fifth" aria-label="Przycisk przenoszący do sekcji kontakt">kontakt</a>
         </div>
     </nav>
     <header id="home" class="home">
@@ -50,7 +56,7 @@
             <h1>Witaj w <span>Debesta</span>Print</h1>
             <p>Druk 3D to nasza pasja</p>
         </div>
-        <a href="#about-us" class="home__btn">poznaj nas</a>
+        <a href="#about-us" class="home__btn" aria-label="Przycisk przenoszący do sekcji o nas">poznaj nas</a>
         <a href="#about-us" class="home__arrow"
             aria-label="Strzałka w dół, naciśnięcie jej powoduje przejście do sekcji o nas"><i
                 class="fa-solid fa-angles-down"></i></a>
@@ -123,7 +129,9 @@
                 <a href="#" class="box__link" aria-label="Projekt 3D koperty zegarka na rękę"><video
                         src="./img/3D-koperta-zegarka.mp4" class="box__clip" type="video/mp4" loop></video><img
                         src="./img/3D-koperta-zegarka.png" aria-hidden="true" class="box__img"></a>
-                <a href="#" class="box__btn">Zobacz więcej</a>
+                <a href="#" class="box__btn"
+                    aria-label="Przycisk przenoszący do podstrony z większą ilością projektów z naszego portfolio">Zobacz
+                    więcej</a>
             </div>
         </section>
         <section id="prices" class="prices light">
@@ -146,7 +154,8 @@
                                 <li class="card__list-item">1h pracy ≈ 5 zł</li>
                                 <li class="card__list-item">1g filamentu ≈ 1 zł</li>
                             </ul>
-                            <a href="#" class="card__btn">Wyceń</a>
+                            <a href="#" class="card__btn"
+                                aria-label="Przycisk przenoszący do podstrony z wyceną projektu 3D">Wyceń</a>
                         </div>
                     </div>
                     <div class="card" onclick="void(0)">
@@ -166,7 +175,8 @@
                                 <li class="card__list-item">1h pracy ≈ 5 zł</li>
                                 <li class="card__list-item">1g filamentu ≈ 1 zł</li>
                             </ul>
-                            <a href="#contact" class="card__btn">Napisz do nas</a>
+                            <a href="#contact" class="card__btn"
+                                aria-label="Przycisk przenoszący do sekcji kontakt">Napisz do nas</a>
                         </div>
                     </div>
                 </div>
@@ -196,7 +206,8 @@
                         <input type="email" name="email" placeholder="E-mail" required>
                         <textarea name="text" id="text" maxlength="1000" placeholder="Maximum 1000 znaków"
                             required></textarea>
-                        <button type="submit">Wyślij</button>
+                        <button type="submit"
+                            aria-label="Przycisk wysyłający wiadomość do naszego biura">Wyślij</button>
                     </form>
                 </div>
             </div>
