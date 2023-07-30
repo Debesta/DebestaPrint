@@ -554,6 +554,7 @@ main .contact__box-form button:hover {
   color: #003049;
 }
 main .contact__box-link {
+  max-width: 120px;
   padding: 0.5em 0;
 }
 main .contact__box-link i {
