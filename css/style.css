@@ -175,7 +175,7 @@ section {
   font-size: 2rem;
 }
 .nav__logo {
-  min-width: 70px;
+  width: 70px;
   height: 50px;
   padding: 0 10px;
 }
@@ -765,6 +765,7 @@ footer {
     position: absolute;
     top: -10px;
     left: 0;
+    width: 200px;
     height: 180px;
     z-index: 9;
   }
@@ -851,6 +852,7 @@ footer {
   }
   .nav__logo {
     top: -15px;
+    width: 220px;
     height: 200px;
   }
   .nav__title {
