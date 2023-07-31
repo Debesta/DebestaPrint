@@ -175,12 +175,9 @@ section {
   font-size: 2rem;
 }
 .nav__logo {
+  width: 70px;
   height: 50px;
   padding: 0 10px;
-}
-.nav__logo img {
-  width: 100%;
-  height: 100%;
 }
 .nav__bars {
   padding: 10px 30px;
