@@ -175,7 +175,7 @@ section {
   font-size: 2rem;
 }
 .nav__logo {
-  width: 70px;
+  min-width: 70px;
   height: 50px;
   padding: 0 10px;
 }
