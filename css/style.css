@@ -251,27 +251,32 @@ section {
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 2;
 }
-.home__title {
+.home__text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 100%;
-  padding: 20px;
   text-align: center;
   color: #eae2b7;
   z-index: 2;
 }
-.home__title h1 {
+.home__title {
+  margin-bottom: 0.1em;
   font-size: 2.6rem;
   font-weight: bold;
+  letter-spacing: -0.05em;
 }
-.home__title p {
+.home__description {
   font-size: 1.6rem;
 }
 .home__btn {
   position: absolute;
-  top: 55%;
+  top: 56%;
   left: 50%;
   transform: translateX(-50%);
   padding: 10px;
@@ -599,10 +604,10 @@ footer {
 }
 
 @media (min-width: 450px) {
-  .home__title h1 {
+  .home__title {
     font-size: 3.2rem;
   }
-  .home__title p {
+  .home__description {
     font-size: 2rem;
   }
   .home__btn {
@@ -610,10 +615,10 @@ footer {
   }
 }
 @media (min-width: 576px) {
-  .home__title h1 {
+  .home__title {
     font-size: 4.2rem;
   }
-  .home__title p {
+  .home__description {
     font-size: 3rem;
   }
   .home__btn {
@@ -707,10 +712,10 @@ footer {
     opacity: 0;
     z-index: 1;
   }
-  .home__title h1 {
+  .home__title {
     font-size: 5rem;
   }
-  .home__title p {
+  .home__description {
     font-size: 3.8rem;
   }
   .home__btn {
@@ -798,14 +803,14 @@ footer {
   .nav__item {
     font-size: 2rem;
   }
-  .home__title h1 {
+  .home__title {
     font-size: 6rem;
   }
-  .home__title p {
+  .home__description {
     font-size: 4.2rem;
   }
   .home__btn {
-    top: 60%;
+    top: 62%;
     font-size: 3rem;
   }
   main .portfolio .box {
@@ -882,7 +887,7 @@ footer {
   .nav__item {
     font-size: 2.2rem;
   }
-  .home__title h1 {
+  .home__title {
     font-size: 7rem;
   }
   main .about-us .card {
@@ -910,7 +915,7 @@ footer {
   .nav__item {
     font-size: 2.4rem;
   }
-  .home__title h1 {
+  .home__title {
     font-size: 8rem;
   }
 }/*# sourceMappingURL=style.css.map */

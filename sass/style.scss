@@ -1,28 +1,28 @@
 @use 'colors' as *;
 @use 'animations' as *;
 
-@font-face{
+@font-face {
 	font-family: 'Ubuntu';
 	src: url('../fonts/Ubuntu/ubuntu-regular-webfont.eot');
 	src: url('../fonts/Ubuntu/ubuntu-regular-webfont.eot?#iefix') format('embedded-opentype'),
 		url('../fonts/Ubuntu/ubuntu-regular-webfont.woff') format('woff'),
 		url('../fonts/Ubuntu/ubuntu-regular-webfont.woff2') format('woff2'),
 		url('../fonts/Ubuntu/ubuntu-regular-webfont.ttf') format('truetype');
-		font-weight: normal;
-		font-style: normal;
-		font-display: swap;
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
 
-@font-face{
+@font-face {
 	font-family: 'Ubuntu';
 	src: url('../fonts/Ubuntu/ubuntu-bold-webfont.eot');
 	src: url('../fonts/Ubuntu/ubuntu-bold-webfont.eot?#iefix') format('embedded-opentype'),
 		url('../fonts/Ubuntu/ubuntu-bold-webfont.woff') format('woff'),
 		url('../fonts/Ubuntu/ubuntu-bold-webfont.woff2') format('woff2'),
 		url('../fonts/Ubuntu/ubuntu-bold-webfont.ttf') format('truetype');
-		font-weight: bold;
-		font-style: normal;
-		font-display: swap;
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
 }
 
 // RESET
@@ -240,27 +240,36 @@ section {
 		background-color: $shadow-color;
 		z-index: 2;
 	}
-	&__title {
+
+	&__text {
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
 		width: 100%;
-		padding: 20px;
 		text-align: center;
 		color: $negative-text-color;
 		z-index: 2;
-		h1 {
-			font-size: 2.6rem;
-			font-weight: bold;
-		}
-		p {
-			font-size: 1.6rem;
-		}
 	}
+
+	&__title {
+		margin-bottom: 0.1em;
+		font-size: 2.6rem;
+		font-weight: bold;
+		letter-spacing: -0.05em;
+	}
+
+	&__description {
+		font-size: 1.6rem;
+	}
+
 	&__btn {
 		position: absolute;
-		top: 55%;
+		top: 56%;
 		left: 50%;
 		transform: translateX(-50%);
 		padding: 10px;
@@ -634,13 +643,13 @@ footer {
 @media (min-width: 450px) {
 	.home {
 		&__title {
-			h1 {
-				font-size: 3.2rem;
-			}
-			p {
-				font-size: 2rem;
-			}
+			font-size: 3.2rem;
 		}
+
+		&__description {
+			font-size: 2rem;
+		}
+
 		&__btn {
 			font-size: 1.8rem;
 		}
@@ -650,12 +659,11 @@ footer {
 @media (min-width: 576px) {
 	.home {
 		&__title {
-			h1 {
-				font-size: 4.2rem;
-			}
-			p {
-				font-size: 3rem;
-			}
+			font-size: 4.2rem;
+		}
+
+		&__description {
+			font-size: 3rem;
 		}
 		&__btn {
 			top: 58%;
@@ -768,12 +776,11 @@ footer {
 			}
 		}
 		&__title {
-			h1 {
-				font-size: 5rem;
-			}
-			p {
-				font-size: 3.8rem;
-			}
+			font-size: 5rem;
+		}
+
+		&__description {
+			font-size: 3.8rem;
 		}
 		&__btn {
 			font-size: 2.6rem;
@@ -875,15 +882,14 @@ footer {
 
 	.home {
 		&__title {
-			h1 {
-				font-size: 6rem;
-			}
-			p {
-				font-size: 4.2rem;
-			}
+			font-size: 6rem;
+		}
+
+		&__description {
+			font-size: 4.2rem;
 		}
 		&__btn {
-			top: 60%;
+			top: 62%;
 			font-size: 3rem;
 		}
 	}
@@ -986,9 +992,7 @@ footer {
 	}
 	.home {
 		&__title {
-			h1 {
-				font-size: 7rem;
-			}
+			font-size: 7rem;
 		}
 	}
 	main {
@@ -1032,9 +1036,7 @@ footer {
 	}
 	.home {
 		&__title {
-			h1 {
-				font-size: 8rem;
-			}
+			font-size: 8rem;
 		}
 	}
 }
