@@ -202,7 +202,7 @@ section {
 		z-index: 0;
 
 		&--main {
-			background-image: url('../img/3dprinters-small.jpg');
+			background-image: url('../img/3dprinters-small.avif');
 			opacity: 1;
 		}
 	}
@@ -713,29 +713,29 @@ footer {
 		}
 		&__image {
 			&--main {
-				background-image: url('../img/3dprinters-large.jpg');
+				background-image: url('../img/3dprinters-large.avif');
 			}
 
 			&--one {
-				background-image: url('../img/3dprinter-engine-large.jpg');
+				background-image: url('../img/3dprinter-engine-large.avif');
 				opacity: 0;
 				z-index: 1;
 			}
 
 			&--two {
-				background-image: url('../img/3dprinter-large.jpg');
+				background-image: url('../img/3dprinter-large.avif');
 				opacity: 0;
 				z-index: 1;
 			}
 
 			&--three {
-				background-image: url('../img/3printer-desk-large.jpg');
+				background-image: url('../img/3printer-desk-large.avif');
 				opacity: 0;
 				z-index: 1;
 			}
 
 			&--four {
-				background-image: url('../img/printing-press-large.jpg');
+				background-image: url('../img/printing-press-large.avif');
 				opacity: 0;
 				z-index: 1;
 			}
