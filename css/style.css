@@ -260,10 +260,9 @@ section {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100%;
   text-align: center;
   color: #eae2b7;
-  z-index: 2;
+  z-index: 5;
 }
 .home__title {
   margin-bottom: 0.1em;
