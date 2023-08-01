@@ -256,16 +256,12 @@ section {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 65%;
   text-align: center;
   color: #eae2b7;
-  z-index: 2;
+  z-index: 5;
 }
 .home__title {
+  min-width: 730px;
   margin-bottom: 0.1em;
   font-size: 2.6rem;
   font-weight: bold;

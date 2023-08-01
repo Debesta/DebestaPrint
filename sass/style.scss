@@ -246,17 +246,13 @@ section {
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		width: 65%;
 		text-align: center;
 		color: $negative-text-color;
-		z-index: 2;
+		z-index: 5;
 	}
 
 	&__title {
+		min-width: 730px;
 		margin-bottom: 0.1em;
 		font-size: 2.6rem;
 		font-weight: bold;
