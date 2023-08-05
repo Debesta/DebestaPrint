@@ -75,7 +75,7 @@ a {
 }
 
 span {
-  color: #f77f00;
+  color: #9c5000;
 }
 
 section {
@@ -104,7 +104,7 @@ section {
   transform: translateX(-50%);
   height: 3px;
   width: 60px;
-  background-color: #f77f00;
+  background-color: #9c5000;
 }
 
 .buttonHome {
@@ -117,7 +117,7 @@ section {
   opacity: 0;
 }
 .buttonHome:hover {
-  color: #f77f00;
+  color: #9c5000;
 }
 .buttonHome--hide {
   animation: hide 0.5s forwards;
@@ -209,10 +209,10 @@ section {
   transition: color 0.8s;
 }
 .nav__item:hover {
-  color: #f77f00;
+  color: #9c5000;
 }
 .nav__item--active {
-  color: #f77f00;
+  color: #9c5000;
 }
 
 .home {
@@ -320,7 +320,7 @@ main .about-us .card__image {
   align-items: center;
   height: 300px;
   max-width: 300px;
-  border: 3px solid #f77f00;
+  border: 3px solid #9c5000;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -374,7 +374,7 @@ main .portfolio .box__link {
   align-items: center;
   max-width: 400px;
   margin: 3em 3em;
-  border: 3px solid #f77f00;
+  border: 3px solid #9c5000;
   border-radius: 20px;
   transition: transform 0.3s;
   overflow: hidden;
@@ -440,7 +440,7 @@ main .prices .card__first {
   height: 100%;
   width: 100%;
   border-radius: 20px;
-  border: 3px solid #f77f00;
+  border: 3px solid #9c5000;
   transition: transform 1s, opacity 1s;
 }
 main .prices .card__second {
@@ -451,7 +451,7 @@ main .prices .card__second {
   padding: 2em;
   transform: rotateY(-180deg);
   border-radius: 20px;
-  border: 3px solid #f77f00;
+  border: 3px solid #9c5000;
   font-size: 2rem;
   opacity: 0;
   transition: transform 1s, opacity 1s;
@@ -471,7 +471,7 @@ main .prices .card__icons {
   justify-content: center;
   align-items: center;
   font-size: 8rem;
-  color: #f77f00;
+  color: #9c5000;
 }
 main .prices .card__icons .plus {
   font-size: 4rem;
@@ -528,7 +528,7 @@ main .contact__box-title::before {
   transform: translateX(-50%);
   width: 6em;
   height: 3px;
-  background-color: #f77f00;
+  background-color: #9c5000;
 }
 main .contact__box-container {
   max-width: 600px;
@@ -544,7 +544,7 @@ main .contact__box-form input {
   margin-bottom: 0.5em;
   padding: 0.5em;
   font-family: "Ubuntu", sans-serif;
-  border: 3px solid #f77f00;
+  border: 3px solid #9c5000;
   border-radius: 20px;
 }
 main .contact__box-form textarea {
@@ -552,7 +552,7 @@ main .contact__box-form textarea {
   min-height: 200px;
   padding: 0.5em;
   font-family: "Ubuntu", sans-serif;
-  border: 3px solid #f77f00;
+  border: 3px solid #9c5000;
   border-radius: 20px;
   resize: vertical;
 }
@@ -584,10 +584,10 @@ main .contact__box-phone {
   margin-bottom: 0.5em;
 }
 main .contact__box .instagram:hover i {
-  color: #E1306C;
+  color: #e1306c;
 }
 main .contact__box .facebook:hover i {
-  color: #4267B2;
+  color: #4267b2;
 }
 
 footer {
@@ -664,7 +664,7 @@ footer {
     bottom: 20px;
     height: 3px;
     width: 100%;
-    background-color: #f77f00;
+    background-color: #9c5000;
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.8s;
