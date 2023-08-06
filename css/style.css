@@ -111,13 +111,28 @@ section {
   position: fixed;
   bottom: 25px;
   right: 25px;
-  font-size: 4rem;
-  transition: color 0.3s;
+  width: 4rem;
+  height: 4rem;
   z-index: 10;
   opacity: 0;
 }
-.buttonHome:hover {
-  color: #8f5516;
+.buttonHome:hover .normal {
+  opacity: 0;
+}
+.buttonHome:hover .main-color {
+  opacity: 1;
+}
+.buttonHome .arrow-up {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.3s;
+}
+.buttonHome .main-color {
+  opacity: 0;
+}
+.buttonHome .negative {
+  opacity: 0;
 }
 .buttonHome--hide {
   animation: hide 0.5s forwards;
@@ -196,8 +211,11 @@ section {
   padding: 0 10px;
 }
 .nav__bars {
-  padding: 10px 30px;
-  font-size: 3rem;
+  padding: 0.5em 1em;
+}
+.nav__bars .burger-bars {
+  width: 6rem;
+  height: 6rem;
 }
 .nav__second {
   display: flex;
@@ -290,16 +308,17 @@ section {
   background-color: #eae2b7;
   color: #003049;
 }
-.home__arrow {
+.home__about-us {
   display: block;
   position: absolute;
   bottom: 0px;
   left: 50%;
-  padding: 20px;
   transform: translateX(-50%);
-  font-size: 4rem;
-  color: #eae2b7;
   z-index: 4;
+}
+.home__about-us .arrow {
+  height: 7rem;
+  width: 7rem;
 }
 
 main .about-us .card {
@@ -470,12 +489,18 @@ main .prices .card__icons {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 8rem;
-  color: #8f5516;
+}
+main .prices .card__icons .printer {
+  height: 10rem;
+  width: 10rem;
 }
 main .prices .card__icons .plus {
-  font-size: 4rem;
-  padding: 0.5em;
+  height: 5rem;
+  width: 5rem;
+}
+main .prices .card__icons .file {
+  height: 10rem;
+  width: 10rem;
 }
 main .prices .card__btn {
   position: absolute;
@@ -509,8 +534,9 @@ main .contact__box {
 main .contact__box-socials {
   display: flex;
   flex-direction: column;
+  text-align: left;
   width: 100%;
-  padding: 2em;
+  padding: 0.5em;
   font-size: 2rem;
 }
 main .contact__box-title {
@@ -574,20 +600,25 @@ main .contact__box-form button:hover {
   color: #003049;
 }
 main .contact__box-link {
-  max-width: 120px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 12rem;
   padding: 0.5em 0;
 }
 main .contact__box-link i {
+  width: 2.6rem;
+  height: 2.6rem;
   transition: color 0.3s;
 }
 main .contact__box-phone {
   margin-bottom: 0.5em;
 }
-main .contact__box .instagram:hover i {
-  color: #e1306c;
+main .contact__box .instagram__icon {
+  background: url("../img/instagram.svg");
 }
-main .contact__box .facebook:hover i {
-  color: #4267b2;
+main .contact__box .facebook__icon {
+  background: url("../img/facebook.svg");
 }
 
 footer {
@@ -717,8 +748,9 @@ footer {
   .home__btn {
     font-size: 2.6rem;
   }
-  .home__arrow {
-    font-size: 6rem;
+  .home__about-us .arrow {
+    width: 10rem;
+    height: 10rem;
   }
   main .about-us .card {
     display: flex;
@@ -754,7 +786,8 @@ footer {
   .buttonHome {
     bottom: 50px;
     right: 50px;
-    font-size: 6rem;
+    width: 6rem;
+    height: 6rem;
   }
   .container {
     max-width: 80vw;

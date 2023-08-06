@@ -7,14 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Author: Sebastian Rolla, making 3D projects and selling 3D printing services">
     <title>DebestaPrint</title>
-    <link rel="shortcut icon" type="image/x-icon" href="./img/LOGO.png" />
-    <script src="https://kit.fontawesome.com/f4889bb386.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <a href="#home" class="buttonHome buttonHome--hide" aria-label="Przycisk przenoszący do sekcji home"><i
-            class="fa-solid fa-circle-arrow-up"></i></a>
+    <a href="#home" class="buttonHome buttonHome--hide" aria-label="Przycisk przenoszący do sekcji home">
+        <img src="./img/arrow-up-normal.webp" aria-hidden="true" class="arrow-up normal">
+        <img src="./img/arrow-up-negative.webp" aria-hidden="true" class="arrow-up negative">
+        <img src="./img/arrow-up-main-color.webp" aria-hidden="true" class="arrow-up main-color"></a>
     <nav class="nav">
         <div class="nav__first">
             <a href="#home" class="nav__name"
@@ -23,8 +23,8 @@
                     alt="Logo firmy DebestaPrint, mała litera d w kolorze pomarańczowym i mała litera b w kolorze granatowym">
                 <p class="nav__title"><span>debesta</span>print</p>
             </a>
-            <button class="nav__bars" aria-label="Przycisk rozwijający nawigację"><i
-                    class="fa-solid fa-bars"></i></button>
+            <button class="nav__bars" aria-label="Przycisk rozwijający nawigację"><img src="./img/burger-bars.avif"
+                    aria-hidden="true" class="burger-bars"></button>
         </div>
         <div class="nav__second">
             <a href="#home" class="nav__item first nav__item--active"
@@ -52,9 +52,9 @@
             <p class="home__description">Druk 3D to nasza pasja</p>
         </div>
         <a href="#about-us" class="home__btn" aria-label="Przycisk przenoszący do sekcji o nas">poznaj nas</a>
-        <a href="#about-us" class="home__arrow"
-            aria-label="Strzałka w dół, naciśnięcie jej powoduje przejście do sekcji o nas"><i
-                class="fa-solid fa-angles-down"></i></a>
+        <a href="#about-us" class="home__about-us"
+            aria-label="Strzałka w dół, naciśnięcie jej powoduje przejście do sekcji o nas"><img
+                src="./img/arrow-down.avif" aria-hidden="true" class="arrow"></a>
     </header>
     <main>
         <section id="about-us" class="about-us light">
@@ -138,7 +138,7 @@
                         <div class="card__first dark" onclick="void(0)">
                             <h3 class="card__title">Druk</h3>
                             <div class="card__icons">
-                                <i class="fa-solid fa-print"></i>
+                                <img src="./img/3d-printer-icon.avif" aria-hidden="true" class="printer">
                             </div>
                         </div>
                         <div class="card__second dark">
@@ -157,9 +157,9 @@
                         <div class="card__first dark">
                             <h3 class="card__title">Druk <span>+</span> Projekt</h3>
                             <div class="card__icons">
-                                <i class="fa-solid fa-print"></i>
-                                <i class="fa-solid fa-plus plus"></i>
-                                <i class="fa-regular fa-file"></i>
+                                <img src="./img/3d-printer-icon.avif" aria-hidden="true" class="printer">
+                                <img src="./img/plus.avif" aria-hidden="true" class="plus">
+                                <img src="./img/3d-file.avif" aria-hidden="true" class="file">
                             </div>
                         </div>
                         <div class="card__second dark">
@@ -182,11 +182,9 @@
             <div class="underline"></div>
             <div class="contact__box">
                 <div class="contact__box-socials">
-                    <a href="instagram.com" class="contact__box-link facebook dark"><i
-                            class="fa-brands fa-square-facebook"></i>
+                    <a href="facebook.pl" class="contact__box-link facebook dark">
                         Facebook</a>
-                    <a href="facebook.com" class="contact__box-link instagram dark"><i
-                            class="fa-brands fa-instagram"></i>
+                    <a href="instagram.pl" class="contact__box-link instagram dark">
                         Instagram</a>
                     <p class="contact__box-phone">tel.: +48 123 456 789</p>
                     <p class="contact__box-adress">00-111</p>

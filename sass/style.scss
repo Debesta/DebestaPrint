@@ -17,8 +17,7 @@
 	font-family: 'Ubuntu';
 	src: url('../fonts/ubuntu-bold-webfont.eot');
 	src: url('../fonts/ubuntu-bold-webfont.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/ubuntu-bold-webfont.woff') format('woff'),
-		url('../fonts/ubuntu-bold-webfont.woff2') format('woff2'),
+		url('../fonts/ubuntu-bold-webfont.woff') format('woff'), url('../fonts/ubuntu-bold-webfont.woff2') format('woff2'),
 		url('../fonts/ubuntu-bold-webfont.ttf') format('truetype');
 	font-weight: bold;
 	font-style: normal;
@@ -96,13 +95,35 @@ section {
 	position: fixed;
 	bottom: 25px;
 	right: 25px;
-	font-size: 4rem;
-	transition: color 0.3s;
+	width: 4rem;
+	height: 4rem;
 	z-index: 10;
 	opacity: 0;
 	&:hover {
-		color: $main-color;
+		.normal {
+			opacity: 0;
+		}
+
+		.main-color {
+			opacity: 1;
+		}
 	}
+
+	.arrow-up {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		transition: opacity 0.3s;
+	}
+
+	.main-color {
+		opacity: 0;
+	}
+
+	.negative {
+		opacity: 0;
+	}
+
 	&--hide {
 		animation: hide 0.5s forwards;
 	}
@@ -180,8 +201,12 @@ section {
 	}
 
 	&__bars {
-		padding: 10px 30px;
-		font-size: 3rem;
+		padding: 0.5em 1em;
+
+		.burger-bars {
+			width: 6rem;
+			height: 6rem;
+		}
 	}
 
 	&__second {
@@ -283,16 +308,18 @@ section {
 			color: $text-color;
 		}
 	}
-	&__arrow {
+	&__about-us {
 		display: block;
 		position: absolute;
 		bottom: 0px;
 		left: 50%;
-		padding: 20px;
 		transform: translateX(-50%);
-		font-size: 4rem;
-		color: $negative-text-color;
 		z-index: 4;
+
+		.arrow {
+			height: 7rem;
+			width: 7rem;
+		}
 	}
 }
 
@@ -484,12 +511,19 @@ main {
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				font-size: 8rem;
-				color: $main-color;
+				.printer {
+					height: 10rem;
+					width: 10rem;
+				}
 
 				.plus {
-					font-size: 4rem;
-					padding: 0.5em;
+					height: 5rem;
+					width: 5rem;
+				}
+
+				.file {
+					height: 10rem;
+					width: 10rem;
 				}
 			}
 
@@ -529,8 +563,9 @@ main {
 			&-socials {
 				display: flex;
 				flex-direction: column;
+				text-align: left;
 				width: 100%;
-				padding: 2em;
+				padding: 0.5em;
 				font-size: 2rem;
 			}
 
@@ -601,9 +636,14 @@ main {
 			}
 
 			&-link {
-				max-width: 120px;
+				display: flex;
+				justify-content: start;
+				align-items: center;
+				width: 12rem;
 				padding: 0.5em 0;
 				i {
+					width: 2.6rem;
+					height: 2.6rem;
 					transition: color 0.3s;
 				}
 			}
@@ -612,16 +652,12 @@ main {
 				margin-bottom: 0.5em;
 			}
 
-			.instagram:hover {
-				i {
-					color: $instagram;
-				}
+			.instagram__icon {
+				background: url('../img/instagram.svg');
 			}
 
-			.facebook:hover {
-				i {
-					color: $facebook;
-				}
+			.facebook__icon {
+				background: url('../img/facebook.svg');
 			}
 		}
 	}
@@ -781,8 +817,11 @@ footer {
 		&__btn {
 			font-size: 2.6rem;
 		}
-		&__arrow {
-			font-size: 6rem;
+		&__about-us {
+			.arrow {
+				width: 10rem;
+				height: 10rem;
+			}
 		}
 	}
 	main {
@@ -826,7 +865,8 @@ footer {
 	.buttonHome {
 		bottom: 50px;
 		right: 50px;
-		font-size: 6rem;
+		width: 6rem;
+		height: 6rem;
 	}
 	.container {
 		max-width: 80vw;
