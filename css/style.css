@@ -111,8 +111,8 @@ section {
   position: fixed;
   bottom: 25px;
   right: 25px;
-  width: 4rem;
-  height: 4rem;
+  width: 6rem;
+  height: 6rem;
   z-index: 10;
   opacity: 0;
 }
@@ -786,8 +786,8 @@ footer {
   .buttonHome {
     bottom: 50px;
     right: 50px;
-    width: 6rem;
-    height: 6rem;
+    width: 8rem;
+    height: 8rem;
   }
   .container {
     max-width: 80vw;
