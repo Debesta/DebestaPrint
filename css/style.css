@@ -400,6 +400,7 @@ main .portfolio .box__link {
   z-index: 1;
 }
 main .portfolio .box__img {
+  display: block;
   height: 100%;
   width: 100%;
 }
