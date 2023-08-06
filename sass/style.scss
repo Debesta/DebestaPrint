@@ -271,13 +271,13 @@ section {
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
+		min-width: 80%;
 		text-align: center;
 		color: $negative-text-color;
 		z-index: 5;
 	}
 
 	&__title {
-		min-width: 300px;
 		margin-bottom: 0.1em;
 		font-size: 2.6rem;
 		font-weight: bold;
@@ -675,7 +675,6 @@ footer {
 @media (min-width: 450px) {
 	.home {
 		&__title {
-			min-width: 400px;
 			font-size: 3.2rem;
 		}
 
@@ -692,7 +691,6 @@ footer {
 @media (min-width: 576px) {
 	.home {
 		&__title {
-			min-width: 500px;
 			font-size: 4.2rem;
 		}
 
@@ -810,7 +808,6 @@ footer {
 			}
 		}
 		&__title {
-			min-width: 700px;
 			font-size: 5rem;
 		}
 
@@ -921,7 +918,6 @@ footer {
 
 	.home {
 		&__title {
-			min-width: 800px;
 			font-size: 6rem;
 		}
 

@@ -274,12 +274,12 @@ section {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  min-width: 80%;
   text-align: center;
   color: #eae2b7;
   z-index: 5;
 }
 .home__title {
-  min-width: 300px;
   margin-bottom: 0.1em;
   font-size: 2.6rem;
   font-weight: bold;
@@ -632,7 +632,6 @@ footer {
 
 @media (min-width: 450px) {
   .home__title {
-    min-width: 400px;
     font-size: 3.2rem;
   }
   .home__description {
@@ -644,7 +643,6 @@ footer {
 }
 @media (min-width: 576px) {
   .home__title {
-    min-width: 500px;
     font-size: 4.2rem;
   }
   .home__description {
@@ -742,7 +740,6 @@ footer {
     z-index: 1;
   }
   .home__title {
-    min-width: 700px;
     font-size: 5rem;
   }
   .home__description {
@@ -836,7 +833,6 @@ footer {
     font-size: 2rem;
   }
   .home__title {
-    min-width: 800px;
     font-size: 6rem;
   }
   .home__description {
