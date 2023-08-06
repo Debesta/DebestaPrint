@@ -573,6 +573,7 @@ main .contact__box-form input {
   font-family: "Ubuntu", sans-serif;
   border: 3px solid #8f5516;
   border-radius: 20px;
+  background-color: #eae2b7;
 }
 main .contact__box-form textarea {
   max-width: 100%;
@@ -581,6 +582,7 @@ main .contact__box-form textarea {
   font-family: "Ubuntu", sans-serif;
   border: 3px solid #8f5516;
   border-radius: 20px;
+  background-color: #eae2b7;
   resize: vertical;
 }
 main .contact__box-form button {

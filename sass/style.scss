@@ -606,6 +606,7 @@ main {
 					font-family: 'Ubuntu', sans-serif;
 					border: 3px solid $main-color;
 					border-radius: 20px;
+					background-color: $bg-color;
 				}
 				textarea {
 					max-width: 100%;
@@ -614,6 +615,7 @@ main {
 					font-family: 'Ubuntu', sans-serif;
 					border: 3px solid $main-color;
 					border-radius: 20px;
+					background-color: $bg-color;
 					resize: vertical;
 				}
 
