@@ -214,8 +214,8 @@ section {
   padding: 0.5em 1em;
 }
 .nav__bars .burger-bars {
-  width: 6rem;
-  height: 6rem;
+  width: 4rem;
+  height: 4rem;
 }
 .nav__second {
   display: flex;
