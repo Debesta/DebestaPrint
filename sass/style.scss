@@ -395,7 +395,6 @@ main {
 			justify-content: center;
 			align-items: center;
 			flex-direction: column;
-			padding: 0em 0;
 			overflow: hidden;
 			z-index: 0;
 
@@ -404,7 +403,7 @@ main {
 				justify-content: center;
 				align-items: center;
 				max-width: 400px;
-				margin: 0 3em;
+				margin: 3em;
 				border: 3px solid $main-color;
 				border-radius: 20px;
 				transition: transform 0.3s;
@@ -554,6 +553,13 @@ main {
 				}
 			}
 		}
+	}
+
+	.pricing{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 94vh;
 	}
 
 	.contact {

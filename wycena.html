@@ -30,7 +30,16 @@
     </nav>
     <main>
         <section id="pricing" class="pricing">
-            
+            <form method="post">
+                <div>
+                    <label for="file-selector">Wybierz projekt</label>
+                    <input type="file" id="file-selector" name="file-selector" accept=".stl" required multiple>
+                </div>
+                <div>
+                    <button>Wyceń</button>
+                </div>
+           </form> 
+           
         </section>
     </main>
     <footer class="light">
@@ -38,6 +47,7 @@
     </footer>
 
     <script src="./js/hiddenNav.js"></script>
+    <script src="./js/pricing.js"></script>
 </body>
 
 </html>
