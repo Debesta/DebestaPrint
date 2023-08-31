@@ -28,16 +28,16 @@
 }
 @font-face {
   font-family: "Ubuntu";
-  src: url("../fonts/ubuntu-regular-webfont.eot");
-  src: url("../fonts/ubuntu-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ubuntu-regular-webfont.woff") format("woff"), url("../fonts/ubuntu-regular-webfont.woff2") format("woff2"), url("../fonts/ubuntu-regular-webfont.ttf") format("truetype");
+  src: url("/fonts/ubuntu-regular-webfont.eot");
+  src: url("/fonts/ubuntu-regular-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/ubuntu-regular-webfont.woff") format("woff"), url("/fonts/ubuntu-regular-webfont.woff2") format("woff2"), url("/fonts/ubuntu-regular-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Ubuntu";
-  src: url("../fonts/ubuntu-bold-webfont.eot");
-  src: url("../fonts/ubuntu-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ubuntu-bold-webfont.woff") format("woff"), url("../fonts/ubuntu-bold-webfont.woff2") format("woff2"), url("../fonts/ubuntu-bold-webfont.ttf") format("truetype");
+  src: url("/fonts/ubuntu-bold-webfont.eot");
+  src: url("/fonts/ubuntu-bold-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/ubuntu-bold-webfont.woff") format("woff"), url("/fonts/ubuntu-bold-webfont.woff2") format("woff2"), url("/fonts/ubuntu-bold-webfont.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -258,7 +258,7 @@ section {
   z-index: 0;
 }
 .home__image--main {
-  background-image: url("../img/3dprinters-small.avif");
+  background-image: url("/img/3dprinters-small.avif");
   opacity: 1;
 }
 .home__shadow {
@@ -624,10 +624,10 @@ main .contact__box-phone {
   margin-bottom: 0.5em;
 }
 main .contact__box .instagram__icon {
-  background: url("../img/instagram.svg");
+  background: url("/img/instagram.svg");
 }
 main .contact__box .facebook__icon {
-  background: url("../img/facebook.svg");
+  background: url("/img/facebook.svg");
 }
 
 footer {
@@ -726,25 +726,25 @@ footer {
     opacity: 1;
   }
   .home__image--main {
-    background-image: url("../img/3dprinters-large.avif");
+    background-image: url("/img/3dprinters-large.avif");
   }
   .home__image--one {
-    background-image: url("../img/3dprinter-engine-large.avif");
+    background-image: url("/img/3dprinter-engine-large.avif");
     opacity: 0;
     z-index: 1;
   }
   .home__image--two {
-    background-image: url("../img/3dprinter-large.avif");
+    background-image: url("/img/3dprinter-large.avif");
     opacity: 0;
     z-index: 1;
   }
   .home__image--three {
-    background-image: url("../img/3printer-desk-large.avif");
+    background-image: url("/img/3printer-desk-large.avif");
     opacity: 0;
     z-index: 1;
   }
   .home__image--four {
-    background-image: url("../img/printing-press-large.avif");
+    background-image: url("/img/printing-press-large.avif");
     opacity: 0;
     z-index: 1;
   }

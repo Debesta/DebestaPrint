@@ -3,11 +3,10 @@
 
 @font-face {
 	font-family: 'Ubuntu';
-	src: url('../fonts/ubuntu-regular-webfont.eot');
-	src: url('../fonts/ubuntu-regular-webfont.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/ubuntu-regular-webfont.woff') format('woff'),
-		url('../fonts/ubuntu-regular-webfont.woff2') format('woff2'),
-		url('../fonts/ubuntu-regular-webfont.ttf') format('truetype');
+	src: url('/fonts/ubuntu-regular-webfont.eot');
+	src: url('/fonts/ubuntu-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		url('/fonts/ubuntu-regular-webfont.woff') format('woff'), url('/fonts/ubuntu-regular-webfont.woff2') format('woff2'),
+		url('/fonts/ubuntu-regular-webfont.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
@@ -15,10 +14,10 @@
 
 @font-face {
 	font-family: 'Ubuntu';
-	src: url('../fonts/ubuntu-bold-webfont.eot');
-	src: url('../fonts/ubuntu-bold-webfont.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/ubuntu-bold-webfont.woff') format('woff'), url('../fonts/ubuntu-bold-webfont.woff2') format('woff2'),
-		url('../fonts/ubuntu-bold-webfont.ttf') format('truetype');
+	src: url('/fonts/ubuntu-bold-webfont.eot');
+	src: url('/fonts/ubuntu-bold-webfont.eot?#iefix') format('embedded-opentype'),
+		url('/fonts/ubuntu-bold-webfont.woff') format('woff'), url('/fonts/ubuntu-bold-webfont.woff2') format('woff2'),
+		url('/fonts/ubuntu-bold-webfont.ttf') format('truetype');
 	font-weight: bold;
 	font-style: normal;
 	font-display: swap;
@@ -253,7 +252,7 @@ section {
 		z-index: 0;
 
 		&--main {
-			background-image: url('../img/3dprinters-small.avif');
+			background-image: url('/img/3dprinters-small.avif');
 			opacity: 1;
 		}
 	}
@@ -377,7 +376,7 @@ main {
 	.portfolio {
 		width: 100%;
 
-		.shadow{
+		.shadow {
 			&::before {
 				content: '';
 				position: absolute;
@@ -555,7 +554,7 @@ main {
 		}
 	}
 
-	.pricing{
+	.pricing {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -666,11 +665,11 @@ main {
 			}
 
 			.instagram__icon {
-				background: url('../img/instagram.svg');
+				background: url('/img/instagram.svg');
 			}
 
 			.facebook__icon {
-				background: url('../img/facebook.svg');
+				background: url('/img/facebook.svg');
 			}
 		}
 	}
@@ -793,29 +792,29 @@ footer {
 		}
 		&__image {
 			&--main {
-				background-image: url('../img/3dprinters-large.avif');
+				background-image: url('/img/3dprinters-large.avif');
 			}
 
 			&--one {
-				background-image: url('../img/3dprinter-engine-large.avif');
+				background-image: url('/img/3dprinter-engine-large.avif');
 				opacity: 0;
 				z-index: 1;
 			}
 
 			&--two {
-				background-image: url('../img/3dprinter-large.avif');
+				background-image: url('/img/3dprinter-large.avif');
 				opacity: 0;
 				z-index: 1;
 			}
 
 			&--three {
-				background-image: url('../img/3printer-desk-large.avif');
+				background-image: url('/img/3printer-desk-large.avif');
 				opacity: 0;
 				z-index: 1;
 			}
 
 			&--four {
-				background-image: url('../img/printing-press-large.avif');
+				background-image: url('/img/printing-press-large.avif');
 				opacity: 0;
 				z-index: 1;
 			}
@@ -945,8 +944,7 @@ footer {
 
 	main {
 		.portfolio {
-
-			.shadow{
+			.shadow {
 				&::before {
 					content: '';
 					width: 280px;
@@ -1055,15 +1053,13 @@ footer {
 		}
 
 		.portfolio {
-
-			.shadow{
+			.shadow {
 				&::before {
 					width: 340px;
 					box-shadow: inset -280px 40px 40px 0px $text-color;
 				}
 			}
 			.box {
-
 				&__link {
 					max-width: 400px;
 					margin: 0 3em;
