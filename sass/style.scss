@@ -1,162 +1,9 @@
+@use 'reset' as *;
+@use 'fonts' as *;
 @use 'colors' as *;
+@use 'buttons' as *;
 @use 'animations' as *;
 
-@font-face {
-	font-family: 'Ubuntu';
-	src: url('/fonts/ubuntu-regular-webfont.eot');
-	src: url('/fonts/ubuntu-regular-webfont.eot?#iefix') format('embedded-opentype'),
-		url('/fonts/ubuntu-regular-webfont.woff') format('woff'), url('/fonts/ubuntu-regular-webfont.woff2') format('woff2'),
-		url('/fonts/ubuntu-regular-webfont.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'Ubuntu';
-	src: url('/fonts/ubuntu-bold-webfont.eot');
-	src: url('/fonts/ubuntu-bold-webfont.eot?#iefix') format('embedded-opentype'),
-		url('/fonts/ubuntu-bold-webfont.woff') format('woff'), url('/fonts/ubuntu-bold-webfont.woff2') format('woff2'),
-		url('/fonts/ubuntu-bold-webfont.ttf') format('truetype');
-	font-weight: bold;
-	font-style: normal;
-	font-display: swap;
-}
-
-// RESET
-
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
-
-html {
-	scroll-behavior: smooth;
-	font-size: 62.5%;
-}
-
-body {
-	font-family: 'Ubuntu', sans-serif;
-	width: 100%;
-	height: 100%;
-	background-color: $bg-color;
-	color: $text-color;
-}
-
-button {
-	background: none;
-	border: none;
-	cursor: pointer;
-}
-
-a {
-	text-decoration: none;
-	color: $text-color;
-}
-
-span {
-	color: $main-color;
-}
-
-section {
-	position: relative;
-	padding: 4em 0;
-}
-
-.container {
-	position: relative;
-	margin: 0 auto;
-	width: 100%;
-	max-width: 1200px;
-}
-
-.title {
-	padding: 20px 0;
-	font-size: 2.4rem;
-	font-weight: bold;
-	text-align: center;
-	text-transform: uppercase;
-}
-
-.underline {
-	position: absolute;
-	top: 50px;
-	left: 50%;
-	transform: translateX(-50%);
-	height: 3px;
-	width: 60px;
-	background-color: $main-color;
-}
-
-.buttonHome {
-	position: fixed;
-	bottom: 25px;
-	right: 25px;
-	width: 6rem;
-	height: 6rem;
-	z-index: 10;
-	opacity: 0;
-	&:hover {
-		.normal {
-			opacity: 0;
-		}
-
-		.main-color {
-			opacity: 1;
-		}
-	}
-
-	.arrow-up {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		transition: opacity 0.3s;
-	}
-
-	.main-color {
-		opacity: 0;
-	}
-
-	.negative {
-		opacity: 0;
-	}
-
-	&--hide {
-		animation: hide 0.5s forwards;
-	}
-	&--show {
-		animation: show 0.5s forwards;
-	}
-}
-
-.light {
-	color: $text-color;
-	background-color: $bg-color;
-}
-
-.dark {
-	color: $bg-color;
-	background-color: $text-color;
-}
-
-::placeholder {
-	font-family: 'Ubuntu', sans-serif;
-	color: $shadow-color;
-	opacity: 1;
-}
-
-:-ms-input-placeholder {
-	font-family: 'Ubuntu', sans-serif;
-	color: $shadow-color;
-}
-
-::-ms-input-placeholder {
-	font-family: 'Ubuntu', sans-serif;
-	color: $shadow-color;
-}
 
 // NAVIGATION
 
@@ -289,24 +136,9 @@ section {
 	}
 
 	&__btn {
-		position: absolute;
 		top: 56%;
 		left: 50%;
 		transform: translateX(-50%);
-		padding: 10px;
-		border: 2px solid $negative-text-color;
-		border-radius: 5px;
-		font-size: 1.6rem;
-		font-weight: bold;
-		text-transform: uppercase;
-		text-align: center;
-		color: $negative-text-color;
-		transition: 0.3s;
-		z-index: 4;
-		&:hover {
-			background-color: $negative-text-color;
-			color: $text-color;
-		}
 	}
 	&__about-us {
 		display: block;
@@ -421,25 +253,9 @@ main {
 			}
 
 			&__btn {
-				position: absolute;
 				right: 50%;
 				bottom: 0;
 				transform: translate(50%, 0);
-				margin: 2em 0;
-				padding: 10px;
-				border: 2px solid $negative-text-color;
-				border-radius: 5px;
-				font-size: 1.6rem;
-				font-weight: bold;
-				text-transform: uppercase;
-				text-align: center;
-				color: $negative-text-color;
-				transition: 0.3s;
-				z-index: 4;
-				&:hover {
-					background-color: $negative-text-color;
-					color: $text-color;
-				}
 			}
 		}
 	}
@@ -531,25 +347,10 @@ main {
 			}
 
 			&__btn {
-				position: absolute;
 				right: 50%;
 				bottom: 0;
 				transform: translate(50%, 0);
-				margin: 2em 0;
-				padding: 10px;
-				border: 2px solid $negative-text-color;
-				border-radius: 5px;
 				font-size: 1.6rem;
-				font-weight: bold;
-				text-transform: uppercase;
-				text-align: center;
-				color: $negative-text-color;
-				transition: 0.3s;
-				z-index: 4;
-				&:hover {
-					background-color: $negative-text-color;
-					color: $text-color;
-				}
 			}
 		}
 	}
@@ -626,24 +427,6 @@ main {
 					border-radius: 20px;
 					background-color: $bg-color;
 					resize: vertical;
-				}
-
-				button {
-					margin: 2em 0;
-					padding: 10px;
-					border: 2px solid $negative-text-color;
-					border-radius: 5px;
-					font-size: 1.6rem;
-					font-weight: bold;
-					text-transform: uppercase;
-					text-align: center;
-					color: $negative-text-color;
-					transition: 0.3s;
-					z-index: 4;
-					&:hover {
-						background-color: $negative-text-color;
-						color: $text-color;
-					}
 				}
 			}
 
