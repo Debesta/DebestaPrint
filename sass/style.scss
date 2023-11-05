@@ -126,7 +126,7 @@
 
 	&__title {
 		margin-bottom: 0.1em;
-		font-size: 2.6rem;
+		font-size: 4rem;
 		font-weight: bold;
 		letter-spacing: -0.05em;
 	}
@@ -136,7 +136,7 @@
 	}
 
 	&__btn {
-		top: 56%;
+		top: 53%;
 		left: 50%;
 		transform: translateX(-50%);
 	}
@@ -428,6 +428,11 @@ main {
 					background-color: $bg-color;
 					resize: vertical;
 				}
+
+				.button{
+					position: relative;
+					bottom: 0;
+				}
 			}
 
 			&-link {
@@ -470,7 +475,7 @@ footer {
 @media (min-width: 450px) {
 	.home {
 		&__title {
-			font-size: 3.2rem;
+			font-size: 4.2rem;
 		}
 
 		&__description {
@@ -486,14 +491,14 @@ footer {
 @media (min-width: 576px) {
 	.home {
 		&__title {
-			font-size: 4.2rem;
+			font-size: 4.4rem;
 		}
 
 		&__description {
 			font-size: 3rem;
 		}
 		&__btn {
-			top: 58%;
+			top: 52%;
 			font-size: 2rem;
 		}
 	}
@@ -640,6 +645,14 @@ footer {
 				}
 				&__text {
 					width: 50%;
+					
+					h3{
+						font-size: 2.8rem;
+					}
+
+					p{
+						font-size: 1.6rem;;
+					}
 				}
 			}
 		}
@@ -720,7 +733,7 @@ footer {
 			font-size: 4.2rem;
 		}
 		&__btn {
-			top: 62%;
+			top: 52%;
 			font-size: 3rem;
 		}
 	}
@@ -832,6 +845,16 @@ footer {
 		.about-us {
 			.card {
 				justify-content: space-evenly;
+
+				&__text{
+					h3{
+						font-size: 3.2rem;
+					}
+
+					p{
+						font-size: 2rem;
+					}
+				}
 			}
 		}
 
